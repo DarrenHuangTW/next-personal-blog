@@ -1,0 +1,192 @@
+---
+title: SEO電子報第三十期 – 2021.04.01~2021.04.15
+date: 2021-04-15
+tags: ['SEO電子報']
+draft: false
+summary: 電子報來到第30期，可喜可賀! 這集我認為最重要的就是第二點商品評論的算法更新，很多網站都看到不小的影響；再來是第六點的SERP測試，Google近來進軍購物市場的力道越來越強，待其成形想必會稀釋掉電商網站的流量。還有最新一期的Google Search
+images: []
+---
+
+電子報來到第30期，可喜可賀! 這集我認為最重要的就是第二點商品評論的算法更新，很多網站都看到不小的影響；再來是第六點的SERP測試，Google近來進軍購物市場的力道越來越強，待其成形想必會稀釋掉電商網站的流量。還有最新一期的Google Search Podcast，雖然對於SEO沒有太直接的幫助，但知道搜尋背後的運作機制還是相當有趣的，推薦大家有空聽聽!
+
+* [GSC 支援正規表達式 (Regular Expression)](http://43.201.249.211/seo-newsletter-issue-30.html#toc-1)
+* [Google 推出「商品評論」更新](http://43.201.249.211/seo-newsletter-issue-30.html#toc-2)
+* [BuzzSumo 分析1億篇文章告訴你標題成功的祕訣](http://43.201.249.211/seo-newsletter-issue-30.html#toc-3)
+* [[決策樹狀圖] 產品頁該被收錄嗎](http://43.201.249.211/seo-newsletter-issue-30.html#toc-4)
+* [[活動資訊] Google I/O 2021 與 TechSEO Boost](http://43.201.249.211/seo-newsletter-issue-30.html#toc-5)
+* [網站 Cookie 通知對效能影響的最佳做法](http://43.201.249.211/seo-newsletter-issue-30.html#toc-6)
+* [SERP測試: 商品知識圖譜出現Cameo影片](http://43.201.249.211/seo-newsletter-issue-30.html#toc-7)
+* [[好文] 三種點擊訊號 – First, Long, and Last Click](http://43.201.249.211/seo-newsletter-issue-30.html#toc-8)
+* [官方影片: Web Stories入門介紹](http://43.201.249.211/seo-newsletter-issue-30.html#toc-9)
+* [[摘要] Search Podcast – serving, hreflang, and more](http://43.201.249.211/seo-newsletter-issue-30.html#toc-10)
+
+
+---
+
+## GSC 支援正規表達式 (Regular Expression)
+
+千呼萬喚始出來，**Google Search Console終於在四月開始支援使用正規表達式 (Regular Expression, Regex)** 做篩選的方法。以往只能透過其他方法，像是透過GA的介面、使用Google Data Studio、下載到Excel…等等，才能做比較進階的篩選。
+
+![Google Search Console 支援正規運算式](http://43.201.249.211/wp-content/uploads/2021/04/screenshot-search.google.com-2021.04.26-10_32_45.png)
+Regex的使用情境不勝枚舉，舉例來說，如果文章網址自動包含了年和月 `http://example.com/2021/04/sample-post/`，那原本的GSC篩選器會沒辦法讓你篩選出所有文章類型的網頁，而現在只要寫入`/\d{4}/\d{2}/`就能列出網址中含有`四個數字、斜線、兩個數字`的所有網頁。
+
+Regex是分析上不可或缺的一個技能，還不清楚怎麼應用的強烈建議一定要找個時間好好學起來!
+
+連結: [官方公告](https://developers.google.com/search/blog/2021/04/performance-report-data-filtering?hl=en%3Futm_source%3Dtldrmarketing.com&utm_medium=referral) / [Regex簡介(中文)](https://www.maxlist.xyz/2021/03/26/datastudio-regular-expression/)
+
+
+---
+
+
+## Google 推出「商品評論」更新
+
+現在的網路上充滿著各種開箱文、業配文、或聯盟行銷的文章，這些內容並非全都不好，但很多都只放上基本或重複的資訊就配上導購連結，Google 有感於這樣的情形，因此推出這項更新，目的是高品質、有深度、獨特見解的內容的更能被看到。
+
+這項更新針對的是聯盟行銷取向的內容(affiliate marketing content)，而非電商網站的產品頁。目前僅適用於英文結果並且已推出。根據網路上一些SEO的回報，影響相當不容小覷!
+
+![商品評論更新 1](http://43.201.249.211/wp-content/uploads/2021/04/商品評論更新-1-1024x258.jpg)
+(負面影響，流量從日均100萬掉到50萬，圖片來源: [Glenn Gabe](https://twitter.com/glenngabe/status/1381564539108478979/photo/1))
+
+![商品評論更新 2](http://43.201.249.211/wp-content/uploads/2021/04/商品評論更新-2-1024x277.jpg)
+ (正面影響，流量從日均180萬上升到260萬，圖片來源: [Glenn Gabe](https://twitter.com/glenngabe/status/1381564539108478979/photo/1)) 
+
+連結: [官方公告](https://developers.google.com/search/blog/2021/04/product-reviews-update)
+
+
+---
+
+
+## BuzzSumo 分析1億篇文章告訴你標題成功的祕訣
+
+BuzzSumo 是一間提供內容行銷的分析平台，他們分析了2019/2020年間，1億個在Facebook和Twitter上的文章標題和成效(以”share”為主)，並與其2017年做的相同研究做比較。
+
+全文相當長，有一些滿有趣的見解，但還是提醒大家在閱讀這種分析文章的時候應該要保持懷疑的態度!
+
+* ![top numbers to use in title](http://43.201.249.211/wp-content/uploads/2021/04/top-numbers-to-use-in-title-1024x981.png)
+標題中最有效的數字
+* ![社群標題最常出現的三個連續字](http://43.201.249.211/wp-content/uploads/2021/04/社群標題最常出現的三個連續字-1024x981.png)
+標題中最有效的三個連續字
+* ![標題種類](http://43.201.249.211/wp-content/uploads/2021/04/標題種類-1024x640.png)
+最有效的標題種類
+
+連結: [BuzzSumo文章 (2020年)](https://buzzsumo.com/resources/hundred-million-best-headlines-study/view/) / [2017年的相同研究](https://buzzsumo.com/blog/most-shared-headlines-study/)
+
+
+---
+
+
+## [決策樹狀圖] 產品頁該被收錄嗎
+
+電商網站很常見的幾個問題包括「*缺貨中的產品該被收錄嗎?*」、 「*停售的產品該被收錄嗎?*」 、 「*產品釋出新一代該換網址嗎*」…等等問題。Aleyda Solis 在其 Twitter 上發了這樣一個決策樹狀圖，幫助大家釐清不同情形該採取的SEO行動。
+
+![產品頁收錄SEO](http://43.201.249.211/wp-content/uploads/2021/04/產品頁收錄SEO-1024x579.jpg)
+[圖片來源](https://twitter.com/aleyda/status/1378772415292047360/photo/1)
+
+這條決策樹的問題由上而下為:
+
+* 是否為預售中的產品頁面?
+* 產品是否有庫存 \& 可供購買?
+* 產品是否會在近期補貨?
+* 產品是否有新的網頁?
+* 該產品頁是否有流量/排名/外部連結?
+
+
+---
+
+
+## [活動資訊] Google I/O 2021 與 TechSEO Boost
+
+接下來有兩場我個人相當期待的活動，都是免費的，而且錄影也會事後公開，分享給大家!
+
+[**TechSEO Boost** (4/22\)](https://register.techseoboost.com/)  
+這場活動我年年都有參加，主要聚焦在技術面上的SEO，常會有講者分享他們用程式做了什麼樣的分析，或自動化了哪些流程，每次聽完都是乾貨滿滿，而且有現成的code可以拿來練習，相當推薦。
+
+[**Google I/O** (5/18\~5/20\)](https://events.google.com/io/)  
+Google的開發者大會，完整的演講內容要到月底才會公布，往年都會有不少與SEO息息相關的議題 ([2019年曾做過的整理](https://www.darrenhuang.com/google-io-2019-seo-news-information.html))，相信這次也不會失望。
+
+
+---
+
+
+## 網站 Cookie 通知對效能影響的最佳做法
+
+![網站隱私權通知 1](http://43.201.249.211/wp-content/uploads/2021/04/網站隱私權通知-1.png)
+隨著隱私權高漲，網站受法令規範必須要有隱私權及Cookies的使用通知，但若這些通知安裝的方法不夠好，可能會造成網頁載入速度變差，這篇文章由Google的工程師發表，要教大家安裝cookie通知的一些最佳做法，降低對網頁體驗指標(LCP, FID, CLS)的影響。
+
+* 異步加載(asynchronously)所需要的JS檔案，避免阻塞瀏覽器的主線程
+* 直接載入需要的JS檔案，避免使用tag manager間接載入
+* 使用 `dns-prefetch` 或 `preconnect` 加快載入速度
+* 使用 `preload` 加快載入速度
+* 設置cookie通知的外觀樣式時，注意性能的取捨
+* 注意版塊移位的問題
+* 進階做法 (ex: caching, service workers)
+
+連結: [web.dev文章](https://web.dev/cookie-notice-best-practices/) / [關於resources hints](https://www.facebook.com/searchenginecommunity/posts/497678867636727)
+
+
+---
+
+
+## SERP測試: 商品知識圖譜出現Cameo影片
+
+有國外的網友發現，在搜尋商品時，右側的知識圖譜上出現了名人的Cameo影片，以影音方式補充商品的資訊。通常我對SERP上的外觀測試不會特別報導，但這幾個月以來Google在「商品搜尋」這塊所下的功夫非同小可，包括[Google Shopping變為免費平台](https://www.darrenhuang.com/seo-newsletter-issue-17.html)、[商品價錢在不同網站的追蹤與比較](https://www.darrenhuang.com/seo-newsletter-issue-19.html#toc-5)、[推出更多商品相關的結構化資訊](https://www.darrenhuang.com/seo-newsletter-issue-17.html#toc-6)…等等。可以想見Google想成為購物平台的資訊聚合者，結合自身優勢在這個大餅中分上一塊。
+
+![商品知識圖譜 cameo 影片](http://43.201.249.211/wp-content/uploads/2021/04/商品知識圖譜-cameo-影片-1024x885.jpg)
+[圖片來源](https://twitter.com/RyanMews/status/1378114972388106244)
+
+在[第五期的電子報](https://www.darrenhuang.com/seo-newsletter-issue-5.html#toc-1)曾經介紹過Google Cameo，這是個還在測試中的產品，現在為邀請制，主要功能是讓名人或公眾人物可以用影音的方式回答問題，
+
+連結: [Google Cameo官方文件](https://support.google.com/knowledgepanel/answer/9232550) / [上圖第一個Cameo影片](https://www.google.com/cameos/story/6EBM5H8Z/BLsBdF) / [上圖第二個Cameo影片](https://www.google.com/cameos/_-JLV3FT/4Sl2Wx) 
+
+
+---
+
+
+## [好文] 三種點擊訊號 – First, Long, and Last Click
+
+SEO入門課都會提到點擊率的重要，這篇 Moz 文章更進一步的分析三種我們該追求的點擊形式: 
+
+* First Click: 網頁呈現在搜尋結果上突出，吸引用戶點擊
+* Long Click: 進站以後不管內容或網站體驗要能滿足用戶的需求
+* Last Click: 網頁上的資訊足以滿足使用者的需求，無須回到搜尋結果頁上閱讀競爭對手的網頁
+
+![SEO三種有效點擊](http://43.201.249.211/wp-content/uploads/2021/04/SEO三種有效點擊-633x1024.png)
+文章中有更多的細節和解釋，包括Google的相關專利，以及每個訊號的優化方法，是個非常值得閱讀的概念，推薦給大家!
+
+連結: [Moz原文](https://moz.com/blog/click-based-seo-engagement-signals)
+
+
+---
+
+
+## 官方影片: Web Stories入門介紹
+
+Web Stories (AMP Stories) 一直是我很喜歡的內容形式，之前也寫過[文章](https://www.darrenhuang.com/amp-story-dedicated-section-google-serp.html)專門介紹。如果對這個名詞不了解歡迎看看下面的影片，內容包含:「*Web Stories 是什麼?*」、「與*社群軟體上的限時動態有何不同之處?*」、「*如何製作 web stories?*」、「*SEO 的考量*」、「*廣告置入和數據分析*」…等等。
+
+如果你有個WordPress網站，我更建議下載[官方的插件](https://wordpress.org/plugins/web-stories/)實際做看看，相當簡單! (只是要做得漂亮很難…)
+
+
+
+---
+
+
+## [摘要] Search Podcast – serving, hreflang, and more
+
+前幾集講了crawling和indexing，這集Gary要談的是”serving”，大家熟悉的ranking只是serving的其中一部分，Gary 說serving有兩個方向，由上而下 \& 由下而上。
+
+
+**由上而下**  
+意即Google收到一個搜索詞 (query) 後，會往下經過一些處理，幾個大步驟包括 **1\.)** 解析與理解搜索詞(parsing and understanding)，理解的部分包含同義字的處理；**2\.)** 接著會送到一個路流器(router)，將解析好的搜索詞向下分配到不同的索引庫(indexes)中，包含圖片、影片、新聞…等等不同的索引庫；**3\.)** 在索引庫階段，根據[前幾集介紹](http://43.201.249.211/seo-newsletter-issue-27.html#toc-8)過的一些方法(ex: posting list)篩選出相關的結果，並往上送。
+
+**由下而上**在索引庫給出結果以後，就是 **1\.)** 排名系統發揮作用的地方，也就是大家熟知的幾百種ranking factors，來對索引庫給的文本進行排序；**2\.)** 接著往上回到路流器，等待並蒐集其他索引庫傳回來的結果\*；**3\)** 再往上走會與廣告系統接觸，那邊的機制會決定那些廣告的出現；**4\.)** 然後再往上把這些資料模板化中，轉為HTML的形式，最後就是使用者所看見的搜尋結果頁。
+
+\* 每個索引庫都有個時間限制，如果路流器在時限內沒有獲得索引庫的回應，則最後的搜尋結果就不會有這個東西。例如管理地圖的索引庫沒有在時限內回傳結果，該搜索詞最後的搜尋結果就不會有地圖(Map Pack)版位。另外，這個過程也會有很多的caching，所以不是每個搜尋都要跑完所有流程。
+
+連結: [文字稿](https://hwcdn.libsyn.com/p/e/0/9/e09c5f8bbe06683b/Search_Off_the_Record_-_Episode_16.pdf?c_id=100704302&cs_id=100704302&preview=1618509592&no-libsyn-stats=true&expiration=1618513192&hwt=a69664560566d928dba21acec1cf0de8)
+
+
+---
+
+最近對區塊鏈特別有興趣，也看到一些與網路有關的應用，好奇的朋友可以去搜尋像是「[ENS](https://ens.domains/)」、「[Like Coin](https://matters.news/@likecoin)」、「[Matters](https://matters.news/about)」…這些字，我覺得非常有可能會徹底改變現有的網路生態，進入所謂「web 3\.0」的世代，強烈推坑大家一起進入區塊鏈世界!
+
+

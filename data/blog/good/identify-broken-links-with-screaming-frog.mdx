@@ -1,0 +1,88 @@
+---
+title: 利用Screaming Frog找出網站中的404頁面
+date: 2017-03-28
+tags: ['Uncategorized']
+draft: false
+summary: 在對一個網站做SEO診斷時，網站上的4XX頁面是個不可或缺的一環。這篇文章要教大家如何使用Screaming Frog這個強大的SEO工具來找出網站上無效的連結。
+images: []
+---
+
+在對一個網站做SEO診斷時，網站上的4XX頁面是個不可或缺的一環，提供一份報告指出一個網站有哪些無效的連結、以及這些連結出現在那些頁面是剛接觸到客戶的起手式之一。這篇文章要教大家如何使用Screaming Frog這個強大的SEO工具來找出網站上無效的連結。
+
+[![screaming-frog](http://www.darrenhuang.com/wp-content/uploads/2017/02/screaming-frog.png)](http://www.darrenhuang.com/wp-content/uploads/2017/02/screaming-frog.png)
+
+如果你熟悉Screaming Frog這個軟體，也許會想 “咦，阿不就把網址丟進去就會跑出來了嗎?”，是這樣沒錯，但是有一個很常被忽略的點是301 redirect，有時候爬完的結果會顯示連結被重定向到其他網頁，而該網頁被再一個301 redirect到404的頁面，這就是所謂的redirect chain，這種類型的404頁面就不是這麼的顯而易見。
+
+如果你沒聽過或是不熟悉Screaming Frog，它是個爬蟲工具。輸入一個網址(ex. www.darrenhhuang.com)，這隻青蛙就會跟隨網站上的連結開始爬你的網站，然後回傳給你蒐集到的一切資料，包括每個網頁的title/description、圖片的alt tag和size、以及上面提到的每個連結出去後回傳的server code….等，相當的實用。文末會再稍微多介紹一下這個產品，以後也會有更多的文章來寫它在實務上的應用。
+
+## 前言
+
+這篇文章用[![台灣新創競技場的網站](http://www.startupstadium.tw/)]作為示範，並沒有甚麼特別原因，只是偶然看到他們的網頁，然後很喜歡他們在做的事情，當然，如果能幫助他們修復網站上的一些小缺陷、提高用戶體驗就再好不過了!
+
+## 直接404頁面
+
+[![crawl startupstadium.tw](http://www.darrenhuang.com/wp-content/uploads/2017/02/crawl-startupstadium.tw_.png)](http://www.darrenhuang.com/wp-content/uploads/2017/02/crawl-startupstadium.tw_.png)
+
+1. 將網站丟入Screaming Frog後，讓它爬
+2. 右側可以選Response Codes為4XX的頁面，這裡可以看到有17個不存在的頁面被找到
+3. 左側會出現這17個頁面的URL和一些其他資料[![screaming frog export 404 pages and inlinks](http://www.darrenhuang.com/wp-content/uploads/2017/03/Export-404-and-inlinks.jpg)](http://www.darrenhuang.com/wp-content/uploads/2017/03/Export-404-and-inlinks.jpg)
+4. 接下來去Bulk Export \> Response Codes \> Client Error (4xx) Inlinks將”這些頁面以及他們從哪裡被連過來”匯出”。
+
+[![404 pages in excel](http://www.darrenhuang.com/wp-content/uploads/2017/03/exported-404-page.png)](http://www.darrenhuang.com/wp-content/uploads/2017/03/exported-404-page.png)
+
+* **Destination**: 告訴你哪一個網頁是不存在的
+* **Source**: 指的是這個不存在的網頁是哪startupstadium的哪一個網頁被找到
+* **Type**: 為該連結的種類，是連結無效(HREF)或是引用的圖片不存在(IMG)，或其他原因。
+
+[![invalid link example](http://www.darrenhuang.com/wp-content/uploads/2017/03/invalid-link-example.png)](http://www.darrenhuang.com/wp-content/uploads/2017/03/invalid-link-example.png)
+
+[![404 page example](http://www.darrenhuang.com/wp-content/uploads/2017/03/404-pages.png)](http://www.darrenhuang.com/wp-content/uploads/2017/03/404-pages.png)
+
+藉此我們就可以找到網站上已經失效的連結並修復!
+
+## 間接404頁面 (Redirect Chain to 404s)
+
+找完直接顯示404 error的頁面後，接著要找的是容易被忽略的間接404頁面。像文章開頭說的，這類型的連結之所以不明顯，是因為在screaming frog這種crawler tools裡不會直接告訴你這些連結的server code是4XX，而只會告訴你它們被3XX重定向到其他地方去了。
+
+至於重定向到哪裡? 可能是一個200頁面、可能是一個404頁面、也有可能是再一個301頁面然後接一個404頁面。
+
+[![Redirects from Screaming Frog](http://www.darrenhuang.com/wp-content/uploads/2017/03/redirects-from-screaming-frog.png)](http://www.darrenhuang.com/wp-content/uploads/2017/03/redirects-from-screaming-frog.png)
+
+1. 一樣先丟入網址，然後右邊選Redirects(3XX)，可以看到有151個
+2. 左邊會出現這151個回傳3XX server code的連結資料
+3. 接著選上面的Export匯出資料，會看到這些連結會被重定向到哪裡[![exported 301 pages](http://www.darrenhuang.com/wp-content/uploads/2017/03/exported-301-pages.png)](http://www.darrenhuang.com/wp-content/uploads/2017/03/exported-301-pages.png)
+4. 把A欄的這堆URL選起來，回到Screaming Frog上，將模式切換成”List Mode”，然後貼上[![Screaming Frog List Mode](http://www.darrenhuang.com/wp-content/uploads/2017/03/Screaming-Frog-List-Mode.jpg)](http://www.darrenhuang.com/wp-content/uploads/2017/03/Screaming-Frog-List-Mode.jpg)
+5. 到Configuration\-\>Spider\-\>Advanced\-\>Always Follow Redirects 給它打勾，然後就可以按start開始跑[![screaming frog follow redirects configuration](http://www.darrenhuang.com/wp-content/uploads/2017/03/always-follow-redirects.png)](http://www.darrenhuang.com/wp-content/uploads/2017/03/always-follow-redirects.png)
+6. 跑完以後到 Reports\-\>Redirect Chains匯出表格[![Screaming Frog Redirect Chain Export](http://www.darrenhuang.com/wp-content/uploads/2017/03/export-redirect-chain-sheet.jpg)](http://www.darrenhuang.com/wp-content/uploads/2017/03/export-redirect-chain-sheet.jpg)
+7. 匯出以後會看到一個長得像下圖的excel檔案，這裡可以看到:
+	* 第47列的連結301跳轉到另一個回傳404的網址
+	* 第51列的連結301跳轉到一個再一次301跳轉到一個回傳200的網址[![redirect chain](http://www.darrenhuang.com/wp-content/uploads/2017/03/Redirect-Chain.png)](http://www.darrenhuang.com/wp-content/uploads/2017/03/Redirect-Chain.png)
+8. 接著再交叉比對步驟3匯出的資料，就可以看出哪些3XX連結其實是404頁面!
+
+## 補充1: Server Code
+
+這篇文章有時候用4XX、3XX，有時候又用404、301，希望沒有造成太多困惑! 這邊的3個數字代表的是當我們向伺服器要求一個連結的時候得到的**伺服器代碼:**
+
+* 200代表一切正確無誤
+* 3XX代表重定向，我們要求的A連結已經搬家到B連結
+* 4XX代表客戶端的錯誤，我們要求的連結不存在
+* 5XX代表伺服器端的錯誤，表示伺服器沒有辦法回應我們的請求
+
+每個伺服器代碼又有不同種類，301, 302, 403, 404, 410…等等，為了閱讀的流暢性我把他們混著用，當我說301其實指的是所有類型的跳轉(3xx)，說404其實指的是所有類型的客戶端錯誤(4xx)\~
+
+## 補充2: Screaming Frog
+
+這個[尖叫青蛙](https://www.screamingfrog.co.uk/seo-spider/)是在SEO界無人不知無人不曉的工具! 免費版本只能爬500個連結，付費版則是149英鎊一年。除了本文說的找到broken links以外，它還可以…
+
+* 看看網站上是不是每一頁都有裝到GA Code
+* 列出每一頁的Metadata (標題、description、canonical……等等)
+* 檢查sitemap裡的URL是否正確
+* 檢查是否有檔案過大的圖片
+
+## 結語
+
+希望耐心看完這篇落落長文章的人是有學到東西的! 如果你有一個網站但是沒錢買Screaming Frog，歡迎下面留言跟我說\~ 留下**你的網址**和**一兩個你希望在此部落格看到的SEO文章主題**當作交換，我很樂意花點時間檢測你的網站上壞掉的連結!
+
+如果兩天內沒有回應，請寄信到我的信箱 darrenhhuang@gmail.com，再次感謝閱讀!
+
+

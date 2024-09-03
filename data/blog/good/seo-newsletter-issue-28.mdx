@@ -1,0 +1,170 @@
+---
+title: SEO電子報第二十八期 – 2021.03.01~2021.03.15
+date: 2021-03-15
+tags: ['SEO電子報']
+draft: false
+summary: 這期的電子報有一些我相當喜歡的內容，第三點的 Local Overrides 有學到一招的感覺；第四點 Rand 的文章我邊讀邊點頭稱是，還有最後一點成人網站品牌字排名消失的案例也非常有趣，雖然實務上如果遇到應該會非常頭大。以下為本期的內容，Enjoy!
+images: []
+---
+
+這期的電子報有一些我相當喜歡的內容，第三點的 Local Overrides 有學到一招的感覺；第四點 Rand 的文章我邊讀邊點頭稱是，還有最後一點成人網站品牌字排名消失的案例也非常有趣，雖然實務上如果遇到應該會非常頭大。以下為本期的內容，Enjoy!
+
+* PageSpeed Insights 開始使用 HTTP/2
+* YouTube SEO 指南
+* 使用 Local Overrides 測試網站速度變化
+* Rand Fishkin 的內容行銷悖論
+* 案例: Yahoo! Japan 新聞優化 CLS 增加單次工作階段頁數15%
+* 測試: 移除標題上的數字，降低了16%自然流量
+* Grow with Google 課程正式上線
+* 有趣案例: 成人網站在品牌詞上排名消失
+* 官方影片: 檢索預算及檢索統計資料報告
+* 官方影片: 用戶生產內容 (User\-Generated Content)
+
+
+---
+
+## PageSpeed Insights 開始使用 HTTP/2
+
+PageSpeed Insights 從今年三月開始使用HTTP/2來做請求(requests)，如果網站有支援HTTP/2，可能會注意到檢測結果上有所進步；若網站尚未支援，則會在結果上看到使用HTTP/2可能帶來的成效。
+
+![速度檢測使用HTTP2](http://43.201.249.211/wp-content/uploads/2021/03/速度檢測使用HTTP2-1024x387.png)
+[官方公告](https://developers.google.com/speed/docs/insights/release_notes#release-notes-for-pagespeed-insights-api-and-pagespeed-insights-ui)
+
+值得一提的是，[Googlebot已經在2020年11月開始就使用HTTP/2進行檢索](https://www.darrenhuang.com/seo-newsletter-issue-17.html#toc-8)，因此這項更動只影響 PageSpeed Insights 相關工具所測出來的結果，對SEO以及實際的使用者體驗並無影響。
+
+就速度和用戶體驗而言，HTTP/2的好處是無庸置疑的，大家不妨看看自家網站是否已支援，若否，可以使用新版檢測工具的預估成效來與工程師們溝通。
+
+連結: [測試網站是否支援HTTP/2的工具](https://tools.keycdn.com/http2-test)
+
+
+---
+
+
+## YouTube SEO 指南
+
+有搜尋的地方就有SEO，隨著現在影音自媒體越來越多，也更多人開始好奇 YouTube 的 SEO 怎麼運作。這篇文章相當完整，解釋了 Google SEO 與 YouTube SEO 的不同、常見的 YT SEO 錯誤、優化的方法、優化的方法、和一些技巧。
+
+
+連結: [YouTube SEO指南](https://www.itamarblauer.com/youtube-seo-guide/) / [[官方] YouTube 搜尋機制](https://www.youtube.com/intl/ALL_in/howyoutubeworks/product-features/search/#overview)
+
+
+---
+
+
+## 使用 Local Overrides 測試網站速度變化
+
+這篇[教學文](https://tryblackbird.com/blog/local-overrides)講解了如何使用 Chrome DevTools 裡的 Local Overrides 來對網頁進行速度上的測試。**舉例來說，當你懷疑網站速度可能是因為某一段 code 而變慢，這方法讓你在不會真的動到網站的情況下，在 local environment 上進行簡單的測試及驗證。**
+
+![local overrides devtools](http://43.201.249.211/wp-content/uploads/2021/03/local-overrides-devtools-1024x287.jpg)
+編輯並測試速度
+
+這方法需要先了解一些基本的網站開發原理，以及能夠辨別可能拖累網站速度的原因，但學會了以後，在一些簡單直接的癥結上就能給出更具體的建議，例如「*把哪幾行code改動了以後，LCP縮短了多少%*」，而不只是「*LCP太高了，需要優化*」。
+
+連結: [網站使用體驗指標](https://www.darrenhuang.com/core-web-vitals-lcp-fid-cls.html)
+
+
+---
+
+
+## Rand Fishkin 的內容行銷悖論
+
+這篇文章中，Rand 對於內容行銷這塊提出了一個觀點：
+
+> 「*新手取向的文章，有較大的閱讀群眾，但放大效果(amplification)較低；而高維度的文章，共鳴的人較少，但這些人更有可能是領域內的專家，有更高的影響力。*」
+
+![most succesful content appeals 1024x577 1](http://43.201.249.211/wp-content/uploads/2021/03/most-succesful-content-appeals-1024x577-1.jpg)
+他認為在內容制定的策略上，行銷人應該要問自己問自己「*Who will help amplify this and why?*」，如果你沒有一個好的想法，那結局可能將是你創造了高質量的內容，但卻沒有被擴增、沒有得到[反向連結](https://www.darrenhuang.com/what-is-backlink-in-seo.html)、沒有被看到、沒有排名…。在做讀者研究的時候，除了目標族群的口味，也該研究會幫忙放大觸及的產業領導人士有哪些。
+
+Rand Fishkin 是SEO圈的知名人士，雖然他已經不再這麼專注在SEO上，但這篇文章我讀完相當有感，推薦給大家!
+
+連結: [Rand Fishkin原文](https://sparktoro.com/blog/the-paradox-of-content-marketing-to-beginners-vs-experts/)
+
+
+---
+
+
+## 案例: Yahoo! Japan 新聞優化 CLS 增加單次工作階段頁數15%
+
+這是 web.dev 上的案例，Yahoo! 日本的新聞網站，在定義其圖片的`height`、`width`、及新的`[aspect-ratio](https://web.dev/aspect-ratio/)`之後，其CLS從0\.2降低為0 ([標準為0\.1以下](https://www.darrenhuang.com/core-web-vitals-lcp-fid-cls.html#CLS))，增加15\.1%單次工作階段頁數、13\.3%平均工作階段時間長度、以及減少1\.72百分點(percentage points)。
+
+![版塊移位案例分析](http://43.201.249.211/wp-content/uploads/2021/03/版塊移位案例分析.png)
+這是內容網站相當常見的CLS問題，優化的方法也相當容易，推薦有類似問題的人不妨以此為鑑!
+
+連結: [web.dev案例](https://web.dev/yahoo-japan-news/)
+
+
+---
+
+
+## 測試: 移除標題上的”數字”，降低了16%自然流量
+
+* \<title\>舊金山網美景點\</title\>
+* \<title\>舊金山十大網美景點\</title\>
+
+上面哪個標題比較好? 根據 SearchPilot 最近的一項測試，它們發現這種條列式文章，在把標題中的數字拿掉以後，自然流量降低了16%左右。
+
+![resources case studies remove number from article titles resultgraph](http://43.201.249.211/wp-content/uploads/2021/03/resources-case-studies-remove-number-from-article-titles-resultgraph.png)
+文章中沒有給出太多的細節，例如造成流量下降的是排名還是點擊率上的變化 (我猜是後者)，但這項測試再次應證了標題上的數字對於吸引讀者眼球有一定程度上的幫助。
+
+對於這種案例或測試，建議大家多少還是保有懷疑的態度，不該盡信!
+
+連結: [SearchPilot文章](https://www.searchpilot.com/resources/case-studies/seo-split-test-lessons-removing-numbers-from-article-titles/)
+
+
+---
+
+
+## Grow with Google 課程正式上線
+
+Google 去年宣傳很大的 Grow with Google 課程終於正式上線了! 課程包括「Data Analytics」、「Project Management」、「UX Design」、「Android Development」、「IT Support」。
+
+課程設在Coursera上，每個月$39美金就能上完這些課程，證書對於[一些雇主](https://grow.google/employers/)等同於大學學歷，也能以此獲得面試機會。
+
+![google 課程](http://43.201.249.211/wp-content/uploads/2021/03/google-課程.png)
+
+---
+
+
+## 官方影片: 檢索預算及檢索統計資料報告
+
+[檢索(Crawl)是網頁要在搜尋引擎上有排名不可或缺的第一步](https://www.darrenhuang.com/how-search-engines-crawl.html)，但 Google 也並非無節制的到處抓取網頁，這支影片中，Daniel 講解了幾個重要的概念「*檢索需求(crawl demand)*」、「*檢索頻率(crawl rate)*」、「*檢索預算(crawl budget)*」，以及如何解讀 GSC 中的檢索統計資料報告所給出的訊息。
+
+* ***檢索需求(crawl demand)***: how much the content is desired by Google
+* ****檢索頻率(crawl rate)****: max \# of concurrent connections a crawl may use to crawl a site
+* ***檢索預算(crawl budget)***: \# of URLs Google can and wants to crawl
+
+
+連結: [相關文件–檢索統計資料報告](https://support.google.com/webmasters/answer/9679690)
+
+
+---
+
+
+## 官方影片: 用戶生產內容 (User\-Generated Content)
+
+這支影片中，Aurora討論了 user\-generated content (UGC) 如何幫助或傷害一個網站，以及一些最佳做法。基本上，用戶生產內容泛指使用者可以在你的網頁上提交的內容，包括評論、留言、圖片、影片。
+
+**雖然 UGC 是讓站長與使用者互動的好管道，但 Google 在評斷網頁時，不一定能夠區分出內容是由站長或者使用者所生產的。 UGC 的管理職責在於站長這端**，因此疏於管理導致太多垃圾或違法留言，不僅會造成網站的 SEO 成效受損，廣告被移除，更重要的是品牌的名聲甚至其他使用者受到傷害。
+
+
+
+---
+
+
+## 有趣案例: 成人網站在品牌詞上排名消失
+
+Marie Haynes 分享了這個它的 Agency 遇到的問題，一間賣成人用品的公司 “*Jack and Jill Adult*“，從去年九月開始，網站在自家的品牌詞上排名消失，該網站確實有被收錄，也沒有太嚴重的技術問題，且是在 SafeSearch 功能關閉的情況下沒有排名。 
+
+![品牌詞無排名](http://43.201.249.211/wp-content/uploads/2021/03/品牌詞無排名.png)
+目前該問題仍然無解中，歡迎大家試試看有沒有辦法突破盲點。此外文章很鉅細的列出診斷過程，儘管目前沒解答，也值得一讀! 
+
+看了一些留言，我認為跟成人網站的本質拖不了關係，但責任比較是在 Google 端。”Jack and Jill” 這個字同時也是一個小朋友的童話故事，儘管在搜尋字加上 Adult ，Google 可能還是認為列出成人網站不洽當。
+
+連結: [案例原文](https://www.mariehaynes.com/not-ranking-for-brand-name/) / [Twitter討論串](https://twitter.com/Marie_Haynes/status/1364580359766163460)
+
+
+---
+
+品牌名稱如果和其他東西太重複或相似，就會導致品牌字本身有不同的搜尋意圖，例如「喬丹體育鞋」或「貓空茶屋」，順利的話可以蹭到其他搜尋意圖的流量，但如果不順利就可能像文中的案例那樣被消失，大家有看過什麼類似的例子歡迎留言分享\~
+
+

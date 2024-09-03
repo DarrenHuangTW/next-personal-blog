@@ -1,0 +1,223 @@
+---
+title: SEO電子報第八期 – 2020.05.01~2020.05.15
+date: 2020-05-18
+tags: ['SEO電子報']
+draft: false
+summary: 第八期電子報的最大兩條消息為Google核心演算法更新和UX三大指標。此外，本期也分享了一些模板和趣聞、及Google的Question Hub計畫，歡迎閱讀!
+images: []
+---
+
+Google的核心演算法更新和UX三大指標(core web vitals)是本期最大的兩則消息，尤其是後者， 國外社群有相當多的討論，我待的公司也已經將它們列為網站效能(web performance)的KPI中。除此之外，Google的Question Hub計畫和一些SEO的趣聞也很值得一讀。 以下為本期內容 :
+ 
+* [Google「2020五月」核心演算法更新](https://www.darrenhuang.com/seo-newsletter-issue-8.html#toc-1)
+* [網頁UX指標三本柱 – LCP / FID / CLS](https://www.darrenhuang.com/seo-newsletter-issue-8.html#toc-2)
+* [計算Web Vitals的Chrome插件](https://www.darrenhuang.com/seo-newsletter-issue-8.html#toc-3)
+* [WebPageTest支援Web Vitals](https://www.darrenhuang.com/seo-newsletter-issue-8.html#toc-4)
+* [CrUX報告紀錄Web Vitals](https://www.darrenhuang.com/seo-newsletter-issue-8.html#toc-5)
+* [LinkedIn整個網站從Google搜尋消失](https://www.darrenhuang.com/seo-newsletter-issue-8.html#toc-6)
+* [趣聞: 小甜甜布蘭妮與Google的拼字校正系統](https://www.darrenhuang.com/seo-newsletter-issue-8.html#toc-7)
+* [Google的Question Hub計畫](https://www.darrenhuang.com/seo-newsletter-issue-8.html#toc-8)
+* [Bing推出Bing News PubHub](https://www.darrenhuang.com/seo-newsletter-issue-8.html#toc-9)
+* [模板: 分析網站受到核心演算法更動的影響](https://www.darrenhuang.com/seo-newsletter-issue-8.html#toc-10)
+* [Chrome將開始擋掉太吃資源的廣告](https://www.darrenhuang.com/seo-newsletter-issue-8.html#toc-11)
+* [GSC的SpecialAnnouncement報表](https://www.darrenhuang.com/seo-newsletter-issue-8.html#toc-12)
+* [官方影片: 網站安全性問題](https://www.darrenhuang.com/seo-newsletter-issue-8.html#toc-13)
+* [[推廣] MDPA行銷數據專業協會 \& NEX Foundation](https://www.darrenhuang.com/seo-newsletter-issue-8.html#toc-14)
+
+
+---
+
+## Google「2020五月」核心演算法更新
+
+在5/4這天，Google推出了今年第二次的核心演算法更新，代號為「May 2020 Core Update」，這波更新影響相當的劇烈，筆者所管理的其中一個網站掉了將近25%的流量。
+
+
+ — Google SearchLiaison (@searchliaison) [May 4, 2020](https://twitter.com/searchliaison/status/1257376879172038656?ref_src=twsrc%5Etfw)
+
+「核心演算法究竟改了什麼?」， 這個問題的答案Google是不會公開的，SEO們只能透過分析案例來整理出個脈絡，但也務必保持著懷疑精神，任何太肯定的論述都只會顯得無知。下面列了兩篇筆者看到不錯的分析，以及Google的文章告訴站長們該如何看待核心演算法改動。
+
+連結: [Glenn Gabe分析](https://www.gsqi.com/marketing-blog/may-2020-google-core-update-case-studies/) / [Marie Haynes分析](https://www.mariehaynes.com/may-2020-core-google-update/) / [Google:關於核心演算法更新](https://webmasters.googleblog.com/2019/08/core-updates.html)
+
+
+---
+
+
+## 網頁UX指標三本柱 – LCP / FID / CLS
+
+網頁的用戶體驗一直以來都相當難量化，Chrome部門希望解決這一項痛點，選定了三項核心指標，並訂出各項指標的好壞標準，希望能將UX的衡量指標系統化。這三項指標分別為:
+
+* Largest Contentful Paint (LCP): 衡量網站的速度
+* First Input Delay (FID): 衡量網站的互動性
+* Cumulative Layout Shift (CLS): 衡量網頁元件的視覺穩定性
+
+![網站UX三大指標](https://www.darrenhuang.com/wp-content/uploads/2020/05/UX三大指標.jpg)
+由Chrome所倡議的標準不容小覷，很多工具都相繼呼應將開始以這三項指標為軸，包括PageSpeed Insights, WebPageTest, CrUX, Lighthouse…等都宣布會在近期內開始支援，會在下面的篇幅再做介紹。
+
+連結: [Chromium文章](https://blog.chromium.org/2020/05/introducing-web-vitals-essential-metrics.html) / [web.dev文章](https://web.dev/vitals/) / [amp.dev文章](https://blog.amp.dev/2020/05/06/amp-web-vitals-a-better-web-together/) / [(中文)iThome報導](https://www.ithome.com.tw/news/137434)
+
+
+---
+
+
+## 計算Web Vitals的Chrome插件
+
+安裝這個Chrome插件可以在瀏覽時自動計算網頁的LCP, FID, 和CLS分數。此插件尚未在Chrome的插件商店上架，需透過以下方法安裝: 
+
+1. [下載ZIP檔](https://github.com/googlechrome/web-vitals-extension/archive/master.zip)
+2. 解加縮後得到`web-vitals-extension-master`資料夾
+3. 在Chrome的網址列輸入 `chrome://extensions`
+4. 將最右上角的開發者模式打開 (Enable Developer Mode)
+5. 將 `web-vitals-extension-master`資料夾拖曳Chrome後安裝
+
+![計算UX chrome插件](https://www.darrenhuang.com/wp-content/uploads/2020/05/計算UX-chrome插件.png)
+連結: [GitHub頁面](https://github.com/GoogleChrome/web-vitals-extension)
+
+
+---
+
+
+## WebPageTest支援Web Vitals
+
+WebPageTest是在測試網頁速度時非常好用的一項工具，這項工具現在將Web Vitals作為報告裡的重要指標，同時也會在網頁載入的逐格影片中秀出Chrome所判定的LCP，並用紅色線條框起來。
+
+
+ — Patrick Meenan (@patmeenan) [May 12, 2020](https://twitter.com/patmeenan/status/1260294231589113859?ref_src=twsrc%5Etfw)
+
+註: FID沒辦法透過測試工具計算，因為工具並不會跟網頁有”互動”，所以用Lab Data一般會用Total Blocking Time (TBT)取代。TBT是另一個指標(web vital)，但並非Chrome Team所定義的核心指標(web core vital)。
+
+連結: [WebPageTest工具](https://webpagetest.org/)
+
+
+---
+
+
+## CrUX報告紀錄Web Vitals
+
+Chrome User Experience (CrUX)是一份公開的database，紀錄了Chrome用戶在瀏覽網頁時的網頁表現，相比於一般的測量工具的Lab Data，CrUX的資料屬於Field Data，相當珍貴。而這項公開資料也開始記錄三項web core vitals，可以利用Google BigQuery跑出來，以下為104人力銀行網站的結果。
+
+![104人力銀行網站用戶體驗](https://www.darrenhuang.com/wp-content/uploads/2020/05/104人力銀行網站用戶體驗-1024x665.png)
+上述的資料可以解讀為：
+```
+92.08%的使用者在瀏覽104人力銀行網站(www.104.com.tw)時的LCP載入時間是好的(<2500ms)，4.97%普通(\>=2500ms, \<4000ms)，2.91%不好(\>=4000ms)，其中第75個百分位數的LCP為1400ms。
+```
+連結: [跑出上圖結果的Query](https://github.com/GoogleChrome/CrUX/blob/master/sql/core-web-vitals.sql)
+
+
+---
+
+
+## LinkedIn整個網站從Google搜尋消失
+
+在5/6這天，www.linkedin.com整個網站從Google上消失，將近兩億個網頁和Knowledge Panel上的圖示都不見了。
+
+![linkedin從Google搜尋消失](https://www.darrenhuang.com/wp-content/uploads/2020/05/linkedin從Google搜尋消失.png)
+John Mueller隨後在發了一條推特說:「用GSC裡的移除工具移除”http://”的版本，會移除所有的變體(http/https/www/non\-www)。」雖然沒有指名道姓， 但Linkedin這個悲劇應該就是由GSC的移除工具所造成的了。
+
+
+ — John 🧀 … 🧀 (@JohnMu) [May 6, 2020](https://twitter.com/JohnMu/status/1258011921636302848?ref_src=twsrc%5Etfw)
+
+連結: [GSC網址移除工具](https://support.google.com/webmasters/answer/9689846)
+
+
+---
+
+
+## 趣聞: 小甜甜布蘭妮與Google的拼字校正系統
+
+Google會偵測使用者輸入的字，然後判斷是否有拼字錯誤的情形。但你知道嗎，Google有一個公開的檔案，用小甜甜布蘭妮的名字(Britney Spears)舉例，列出它們的校正系統所看到的各種錯誤的寫法。
+
+![britney spears mispelling](https://www.darrenhuang.com/wp-content/uploads/2020/05/britney-spears-mispelling.png)
+連結: [Google檔案](https://archive.google.com/jobs/britney.html)
+
+
+---
+
+
+## Google的Question Hub計畫
+
+Google有一個Question Hub計畫，蒐集使用者在Google上沒找到滿意答案的問題，整理在一個地方，讓線上媒體看到後以此創造合適的內容。這是相當實用的一項工具，內容生產者可以看到網路上尚未被回答的問題，而且還是來自真正的人!
+
+這項計畫去年在印度推出，現在還在Beta測試中，而最近在美國也有準備推出的跡象，筆者人在美國，在Google搜尋時常常會在SERP下方被問到我的問題是否有被回答到，如果沒有，我的問題是什麼。
+
+![google question hub計畫](https://www.darrenhuang.com/wp-content/uploads/2020/05/google-question-hub計畫.png)
+這是相當值得關注的一項計畫，Search Engine Rountable有印度用戶提供的更多節圖。
+
+連結: [Google Question Hub](https://questionhub.withgoogle.com/intl/en/) / SER報導([1](https://www.seroundtable.com/google-question-hub-28020.html), [2](https://www.seroundtable.com/google-search-console-content-creators-invite-29339.html), [3](https://www.seroundtable.com/google-question-hub-screen-shots-29395.html), [4](https://www.seroundtable.com/google-questions-hub-us-for-covid-19-queries-29334.html))
+
+
+---
+
+
+## Bing推出Bing News PubHub
+
+Bing推出了一個免費平台 \-「Bing News PubHub」，讓新聞媒體主動提交內容，使內容有機會被上百萬的用戶在使用微軟產品(Cortana, Outlook, Bing.com \& app)時看到。
+
+![Bing推出News PubHub](https://www.darrenhuang.com/wp-content/uploads/2020/05/Bing推出News-PubHub-1024x472.png)
+連結: [官方公告](https://blogs.bing.com/webmaster/may-2020/Helping-news-publishers-control-how-their-content-is-displayed-in-Bing)
+
+
+---
+
+
+## 模板: 分析網站受到核心演算法更動的影響
+
+國外網友Aleyda Solis分享了一個Google Data Studio的模板，可以用GSC的資料來分析網站在那些部分受到核心演算法更動的影響最大。複製後串上自己的GSC資料就可以使用了，相當方便!
+
+![aleyda solis核心演算法分析報告模板](https://www.darrenhuang.com/wp-content/uploads/2020/05/aleyda-solis核心演算法分析報告模板-812x1024.png)
+連結: [模板介紹](https://www.aleydasolis.com/en/search-engine-optimization/google-update-analysis-search-console-data-studio-report-template/) / [模板連結](https://datastudio.google.com/open/1Fm7x1vc0vLokRhGf0WqaMd52mw7wjaSI)
+
+
+---
+
+
+## Chrome將開始擋掉太吃資源的廣告
+
+為了避免網站上的廣告消耗使用者太多的網路流量和電量，Chrome將開始主動擋掉這種不好的廣告。
+
+![Chrome擋掉太吃資源的廣告](https://www.darrenhuang.com/wp-content/uploads/2020/05/Chrome擋掉太吃資源的廣告-150x300.png)
+連結: [官方公告](https://blog.chromium.org/2020/05/resource-heavy-ads-in-chrome.html)
+
+
+---
+
+
+## GSC的SpecialAnnouncement報表
+
+SpecialAnnouncement是因應疫期而被推出的Schema標籤，在[第五期](https://www.darrenhuang.com/seo-newsletter-issue-5.html#toc-6)和[第六期](https://www.darrenhuang.com/seo-newsletter-issue-6.html#toc-6)電子報都有介紹過，現在GSC裡有新的報表可以看到有這個標籤的網頁表現得如何。
+
+![special announcement enhancements](https://1.bp.blogspot.com/-W9vv8YrVTgc/XrESDb48kYI/AAAAAAAAEAg/87VrLLIFE1gUEM3hyqI2n0IPO1VKVo_JQCLcBGAsYHQ/s640/special-announcement-enhancements.png)
+連結: [官方公告](https://webmasters.googleblog.com/2020/05/special-announcements-search-console.html)
+
+
+---
+
+
+## 官方影片: 網站安全性問題
+
+這兩支影片中， Google的Daniel Waisberg和Aurora Morales教給大家: 常見的駭客手法、如何解讀GSC中的安全性問題報告，以及遇到駭客問題如何修復。
+
+
+
+
+連結: [Google安全性報告](https://support.google.com/webmasters/answer/9044101) / [Transparency Report](https://transparencyreport.google.com/safe-browsing/overview)
+
+
+---
+
+
+## [推廣] MDPA行銷數據專業協會 \& NEX Foundation
+
+這兩個是筆者所加入的非營利組織，最近都開始上了軌道 – MDPA建好臉書粉絲頁，網站重新上線並已新增四篇文章(其中一篇是我寫的喔!)，以後也會有越來越多的分析類乾貨；NEX的官方部落格上線，最新的一篇文章是由前陣子因為譚德賽影片事件串紅的Vivi(也是NEX志工)所寫的，除了台灣人在海外的心得故事，也常常會舉辦講座。
+
+兩個組織都是非營利機構，非賺錢導向，只會有滿滿的實用文 ，很多成員都是大神級的人物，下面簡單介紹這兩個組織，歡迎大家關注!
+
+> **MDPA行銷數據專業協會 (*Marketing Data Professionals Association*)**，推廣台灣行銷數據產業的發展、應用與管理以及凝聚業界共識並促進業內、跨領域以及海外交流。\>\> [臉書粉絲頁](https://www.facebook.com/MDPA-%E8%A1%8C%E9%8A%B7%E6%95%B8%E6%93%9A%E5%B0%88%E6%A5%AD%E5%8D%94%E6%9C%83-108298167492070/) / [臉書群組](https://www.facebook.com/groups/webanalytics101) / [官方網站](https://web.analytics101.org/)
+
+> **NEX Foundation (台灣未來基金會)***，協助海外人才在國際舞台上的職涯發展。並更進一步扮演橋樑的角色，連結活躍於世界各地的台灣人才。*[臉書粉絲頁](https://www.facebook.com/NEXFoundation/)*/*[臉書群組](https://www.facebook.com/groups/2370708239860237/)*/*[官方網站](https://www.nexf.org/)*/*[官方部落格](https://media.nexf.org/)
+
+
+---
+
+在周末兼生日的這天完成了這份整理，如果要對讀者許個願望的話，那大家多多留言或發問吧!
+
+
