@@ -1,0 +1,268 @@
+---
+title: SEO電子報第五期 – 2020.03.16~2020.03.31
+date: 2020-04-01
+tags: ['SEO電子報']
+draft: false
+summary: 最近把網站上的評論功能修好了，從電子報開張以來陸陸續續有一些讀者回報這個bug。自己在編輯電子報的時候為求精簡，常刻意省略一些解釋和細節，所以有看不懂的地方很正常，如果對這篇的哪個部分有疑惑或者有所心得，都歡迎留下你的想法!
+images: []
+---
+
+最近把網站上的評論功能修好了，從電子報開張以來陸陸續續有一些讀者回報這個bug。自己在編輯電子報的時候為求精簡，常刻意省略一些解釋和細節，所以有看不懂的地方很正常，如果對這篇的哪個部分有疑惑或者有所心得，都歡迎留下你的想法!
+
+* [「Top Questions Answered 」\- SERP上的名人影音Q\&A](#toc-1)
+* [Safari全面阻擋第三方Cookies](#toc-2)
+* [Bing推出網址/內容提交API](#toc-3)
+* [Schema.org 7\.0發布](#toc-4)
+* [Google官方文章: 「活動」的結構化資料 – 延遲、取消與線上活動](#toc-5)
+* [Bing官方文章: SpecialAnnouncement結構化資料](#toc-6)
+* [Google Search開發者指南的「近期更新」頁](#toc-7)
+* [GSC兩項小更新 – 郵件設定及搜尋結果中的GSC資訊](#toc-8)
+* [Google我的商家在疫情期間的政策調整](#toc-9)
+* [Google站長問答整理 – Mar 17 \& Mar 20](#toc-10)
+* [Chrome 81將開始檔掉HTTP載入的圖片資源](#toc-11)
+* [Google試算表終於可以根據顏色來排序和篩選](#toc-12)
+* [Google官方文章: 如何暫停你的網路事業](#toc-13)
+* [官方影片: 索引涵蓋範圍狀態報表](#toc-14)
+* [官方影片 – 如何修改Google商家上的資訊](#toc-15)
+* [官方影片 – SEO們的JavaScript問題](#toc-16)
+
+
+## 「Top Questions Answered 」\- SERP上的名人影音Q\&A
+
+Google Cameo是一項還在測試中的產品，它主要讓一些名人或公眾人物可以用影音的方式回答粉絲的各種問題。例如當你搜尋「是誰啟發Kevin Durant去打籃球?」，就會有KD本人回答的影片。
+
+![google cameo kevin durant](https://www.darrenhuang.com/wp-content/uploads/2020/03/google-cameo-kevin-durant-1024x694.png)
+而現在當搜尋一些水果、食物、蔬菜時，右邊的知識圖譜(Knowledge Panel)開始會跑出現一些相關的影音Q\&A。例如下面這個截圖的搜尋字是「Brussels Sprout (球芽甘藍)」，右邊多了一區”Top Questions Answered”，裡面是一些廚師回答關於該食材的常見問題的影片。
+
+
+> 'Top questions answered feature' on Google desktop is now appearing for queries related to common foods, fruits, and vegetables. Here's an example where chefs answer questions about Brussels Sprouts (ew, unless there's bacon) – [pic.twitter.com/2UlJ9Hho1B](https://t.co/2UlJ9Hho1B)
+> 
+> — Brian Freiesleben v2 (@type\_SEO) [March 16, 2020](https://twitter.com/type_SEO/status/1239693977751863296?ref_src=twsrc%5Etfw)
+
+連結: [Google Cameo報導](https://techcrunch.com/2018/08/09/google-launches-cameos-a-video-qa-app-aimed-at-celebs/) / [Kevin Durant的Cameo影片](https://www.google.com/cameos/DHVq0lGp/bhFaCC)
+
+
+---
+
+
+## Safari全面阻擋第三方Cookies
+
+從Safari 13\.1開始，Safari將”全面”封鎖第三方Cookies。在官方的公告中有特別提及Tom Anthony以前的一篇文章，講述網站可以透過簡單的Javascript來檢查用戶是否有登入Facebook、Google、Twitter…等等，這項伎倆在這次的更新後也將失效。 
+
+Tom Anthony是筆者很仰慕的一位SEO，聽過他多次演講，也曾在數位引擎上[介紹過](https://www.facebook.com/searchenginecommunity/posts/257231775014772)他的另一項事蹟!
+
+連結: [WebKit公告](https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/) / [Tom Anthony文章](https://www.tomanthony.co.uk/blog/detect-visitor-social-networks/) / [SEL報導](https://www.searchenginejournal.com/safari-full-3rd-party-cookie-blocking/357198/)
+
+
+---
+
+
+## Bing推出網址/內容提交API
+
+Bing推出這兩個API，讓站長們可以在新網頁推出或網頁內容更動時，即時將這些改動主動提交給Bing知道，不需要等待Bingbot自己來抓取跟索引。之前兩個API都在封測，但現在URL Submission API已經開放所有人使用。
+
+網址提交API的上限是每天一萬個URLs，且可以提交3XX或4XX的網址讓Bing知道網站上的更動。
+
+```
+JSON request sample: 
+POST /webmaster/api.svc/json/SubmitUrlbatch?​apikey=sampleapikeyEDECC1EA4AE341CC8B6 HTTP/1.1​
+Content-Type: application/json; charset=utf-8​
+Host: ssl.bing.com​
+{
+"siteUrl":"http://yoursite.com",​
+"urlList":[
+"http://yoursite.com/url1",
+"http://yoursite.com/url2",
+"http://yoursite.com/url3"
+]
+}
+```
+連結: [Bing URL/Content Submission API網站](https://www.bing.com/webmasters/url-submission-api)
+
+
+---
+
+
+## Schema.org 7\.0發布
+
+Schema 7\.0版本推出了幾項和武漢肺炎有關的標記與更新，例如給學校或其他重要機關使用的”SpecialAnnouncement”；標記測試場所的”CovidTestingFacility”；註明活動場所為線上或線下的”eventAttendanceMode”。
+
+![schema blog 7.0 released](https://www.darrenhuang.com/wp-content/uploads/2020/03/schema-blog-7.0-released-1024x551.png)
+連結: [Schema.org官方公告](http://blog.schema.org/2020/03/schema-for-coronavirus-special.html) / [Search Engine Land報導](https://searchengineland.com/schema-org-adds-covid-19-related-structured-data-types-in-version-7-0-330831)
+
+
+---
+
+
+## Google官方文章: 「活動」的結構化資料 – 延遲、取消與線上活動
+
+這篇文章中講到，如果因為疫情的關係必須取消或延遲活動時，活動的Schema Markup應該要怎麼處置；另外也隨著活動逐漸移到線上，Google也開始支援7\.0才剛新推出的”VirtualLocation”屬性。
+
+Google在Event結構化資料的開發者指南也有了大量的更新，有利用此標記的站長可以特別注意一下。
+
+連結: [官方部落格](https://webmasters.googleblog.com/2020/03/new-properties-virtual-or-canceled-events.html) / [“活動”結構化資料更新](https://developers.google.com/search/docs/data-types/event)
+
+
+---
+
+
+## Bing官方文章: SpecialAnnouncement結構化資料
+
+這項新推出的Schema語法Bing搶先採納，主要給予疫情有關的組織用於下面四種情況，Bing的官方文件中也有很詳細的標記指南: 
+
+* 服務的變動 – 例如學校關閉、商業時間變動….等等
+* 官方疫情數據
+* 疫情測試機構
+* 旅遊禁令
+
+ 連結: [官方部落格](https://blogs.bing.com/webmaster/march-2020/Bing-adopts-schema-org-mark-up-for-Special-Announcements-about-COVID-19) / [SpecialAnnouncement標記指南](https://www.bing.com/webmaster/help/special-announcement-specifications-5cbd6249) 
+
+
+---
+
+
+## Google Search開發者指南的「近期更新」頁
+
+Google Search的開發者文檔常常有所更新，例如三月初開始，[「產品(Product)」的結構化資料](https://www.darrenhuang.com/seo-newsletter-issue-4.html#toc-2)必須要有”review”、“aggregateRating“、或“offers”三種屬性中至少一種，否則標記將無效。
+
+這些更新太多了，常常讓過時的資訊在外流通。因此Google推出了一個頁面讓大家可以隨時追蹤文檔裡哪些部分有所修改，相當的實用!
+
+
+> Do you often wish there was 1 page that you could check and see what's new in the search dev docs? Well, here it is, backdated to include things that happened this month \>\> <https://t.co/kREZTScTbt>
+> 
+> — Lizzi Sassman (@okaylizzi) [March 20, 2020](https://twitter.com/okaylizzi/status/1241146046924742657?ref_src=twsrc%5Etfw)
+
+連結: [Google Search文件近期更新內容](https://developers.google.com/search/updates)
+
+
+---
+
+
+## GSC兩項小更新 – 郵件設定及搜尋結果中的GSC資訊
+
+這次的更新讓用戶可以 – (1\.) 選擇是否要在搜尋結果上看到自己管理的GSC資料，以及 (2\.)選擇是否收到特定郵件的通知。
+
+
+> 📢 Want better control over your Search Console user level preferences? Here you go!   
+> ✔️ NEW: Choose whether to show performance data for your property directly in Search results.  
+> ✔️ ENHANCED: Choose which types of emails you want to get.  
+>   
+> Read more at <https://t.co/JN5B9JIwox> [pic.twitter.com/BW6ARKgGDi](https://t.co/BW6ARKgGDi)
+> 
+> — Google Search Central (@googlesearchc) [March 30, 2020](https://twitter.com/googlesearchc/status/1244603549360820226?ref_src=twsrc%5Etfw)
+
+連結: [官方公告](https://support.google.com/webmasters/topic/9420047)
+
+
+---
+
+
+## Google我的商家在疫情期間的政策調整
+
+許多地方商家因為這次疫情的影響必須暫時歇業，而Google也做出了以下幾項政策調整，來因應這樣的現象。
+
+1\.) **允許商家將自己標示為「暫時歇業」**– 以往只有Google客服可以將商家加上這個標記，現在允許店家自己標示。
+
+2\.) **透過對話機器人(Duplex)來確認並更新商家的營業時間** – 這個相當酷，如果還不知道Duplex可以聽聽看下面這段語音。
+
+
+Duplex預約剪頭髮服務
+
+3\.) **暫停開放評論與問與答、商家資訊編輯、及新商家驗證** – 將人力集中投資在衛生相關商家的資訊，而暫停其他優先度較低的服務項目。
+
+![google我的商家 武漢肺炎](https://www.darrenhuang.com/wp-content/uploads/2020/04/google我的商家-武漢肺炎-1024x684.png)
+連結: [Google商家政策調整](https://support.google.com/business/answer/9792336?hl=zh-Hant) / [商家暫時歇業政策](https://blog.google/inside-google/company-announcements/covid-19-how-were-continuing-to-help/)
+
+
+---
+
+
+## Google站長問答整理 – Mar 17 \& Mar 20
+
+Google Webmaster Hangout是官方不定時的Q\&A活動，DeepCrawl幫忙整理每次的內容， 也是筆者固定閱讀的資料來源。以下為幾個有趣的重點: 
+
+* 長期來看，Google會忽視noindex頁面上的連結 [🔗](https://www.deepcrawl.com/blog/news/google-webmaster-hangout-notes-march-17th-2020/#7)
+* 網站上的內容不建議仰賴第三方Cookies [🔗](https://www.deepcrawl.com/blog/news/google-webmaster-hangout-notes-march-17th-2020/#10)
+* Google不會更緊密監視曾經違反條款而遭受處罰的網站 [🔗](https://www.deepcrawl.com/blog/news/google-webmaster-hangout-notes-march-20th-2020/#6)
+* 該如何用Google的工具來檢測非公開的頁面 [🔗](https://www.deepcrawl.com/blog/news/google-webmaster-hangout-notes-march-20th-2020/#7)
+* 我的新部落格剛上線的時後排的很不錯，一兩天後排名就掉了，發生什麼事? [🔗](https://www.deepcrawl.com/blog/news/google-webmaster-hangout-notes-march-20th-2020/#12)
+
+連結: [3/17 Q\&A筆記](https://www.deepcrawl.com/blog/news/google-webmaster-hangout-notes-march-17th-2020/) / [3/20 Q\&A筆記](https://www.deepcrawl.com/blog/news/google-webmaster-hangout-notes-march-20th-2020/)
+
+
+---
+
+
+## Chrome 81將開始檔掉HTTP載入的圖片資源
+
+Chrome 81 (預計2020\.04\.07發布)開始，對於用HTTP載入的圖片，Chrome將會自動升級成HTTPS，如果HTTPS抓取資源失敗，那圖片就**不會**被載入。
+
+Mixed Content是SEO裡很常見的問題，尤其是圖片透過CDN來提供，而非放在相同網域下時，站長只記得要幫自己網域裝上HTTPS而忘記了CDN伺服器。建議大家花點時間檢查網站有沒有這樣的問題。 
+
+
+> In the stable version of Chrome now (v80\), audio and video are currently being blocked if they can't be auto\-upgraded to https. With Chrome 81 (which hasn't rolled out yet), images will be blocked from loading if they can't auto\-upgrade to https <https://t.co/lE2LfR9Xv5> [pic.twitter.com/Qyyh4GUjNH](https://t.co/Qyyh4GUjNH)
+> 
+> — Glenn Gabe (@glenngabe) [March 23, 2020](https://twitter.com/glenngabe/status/1242072232198840323?ref_src=twsrc%5Etfw)
+
+Bonus: 感謝詳細閱讀這份電子報的你! 如果不知道如何檢查自家網站有沒有Mixed Content的問題，歡迎到數位引擎留言，讓筆者幫你免費看看\~
+
+連結: [Chromium公告](https://blog.chromium.org/2019/10/no-more-mixed-messages-about-https.html#:~:text=In Chrome 81, mixed images will be autoupgraded to https://, and Chrome will block them by default if they fail to load over https://. Chrome 81 will be released to early release channels in February 2020.) / [相關文章](https://www.gsqi.com/marketing-blog/google-chrome-block-mixed-content/)
+
+
+---
+
+
+## Google試算表終於可以根據顏色來排序和篩選
+
+這項簡單卻實用功能居然在Google Sheets上被遺漏了這麼久，現在終於可以不用靠外掛就完成了。
+
+![filter%2Bby%2Bcolor](https://1.bp.blogspot.com/--ITI6OnZahI/Xmj267OXpxI/AAAAAAAAIww/V3iLMNPaqtQuS747pm-Ub4JjHh1a9NbGwCLcBGAsYHQ/s1600/filter%2Bby%2Bcolor.gif)
+連結: [官方公告](https://gsuiteupdates.googleblog.com/2020/03/sort-and-filter-cells-by-text-or-fill.html)
+
+
+---
+
+
+## Google官方文章: 如何暫停你的網路事業
+
+Google這篇文章主要是要告訴商家們，如果因為肺炎的關係必須暫停自己的網路事業，或需要在網站上限制特定的功能/產品時，該怎麼處理才妥當。除了部落格文章外也有一篇開發者指南講述技術面的實施細節。
+
+也許很難想像，但很多公司因為疫情的關係，必須要暫停自己的事業，有些老闆考慮是否該將網站整個暫時關閉，這樣的疑慮在論壇上被Google看到，因此有了這篇文章。
+
+連結: [官方部落格](https://webmasters.googleblog.com/2020/03/how-to-pause-your-business-online-in.html) / [開發者指南](https://developers.google.com/search/docs/guides/pause-online-business)
+
+
+---
+
+
+## 官方影片: 索引涵蓋範圍狀態報表
+
+這個SEO新手影片由Daniel Waisberg講解如何用Google Search Console中的「索引涵蓋範圍狀態報表」來觀察網站中頁面被Google抓取和收錄的狀態；過程中遇到的問題，以及如何排除錯誤。 
+
+
+連結: [官方影片](https://www.youtube.com/watch?v=L0UqvdHJaXE) / [GSC文件](https://support.google.com/webmasters/answer/7440203)
+
+
+---
+
+
+## 官方影片 – 如何修改Google商家上的資訊
+
+這是Google官方的SEO新手系列第11集，在講地方商家(Google My Business)中，店家該如何聲明商家資訊擁有權、維護上面資訊的正確、以及如何用此與客戶互動及吸引新客戶。
+
+
+
+---
+
+
+## 官方影片 – SEO們的JavaScript問題
+
+這集的官方Q\&A請來的Martin Splitt來幫忙回來SEO們對JavaScript的問題，總共五個問題，基本上是關於快取、prerendering、以及JS改寫網站內容的相關問題，有興趣的讀者可以看看這個短短的六分鐘影片。
+
+
+
+---
+
+這次的疫情中，很多公司都有做一些事情來幫助社會，在幾個禮拜前Google CEO的一篇文章中講到Google的遠距教學工具(Google Classroom)如何在這個時候提供幫助，裡面[提到台灣老師運用它來授課](https://blog.google/inside-google/company-announcements/covid-19-how-were-continuing-to-help/#:~:text=for example in Hong Kong, Japan and Taiwan)。 台灣在這次的疫情中各種被獲肯定 ，人在國外看到自己的國家被提及特別有感，分享給大家!
+
+

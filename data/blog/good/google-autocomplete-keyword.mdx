@@ -1,0 +1,101 @@
+---
+title: 工具-下載Google搜尋自動完成關鍵字
+date: 2020-11-22
+tags: ['SEO相關']
+draft: false
+summary: 這項工具能把Google自動完成所預測的字，以及每個預測字的再下一層預測字，下載成CSV檔，方便後續整理，提高SEO工作者在進行關鍵字研究時的效率。
+images: []
+---
+
+Google搜尋的自動完成功能(Autocomplete)，[號稱每天幫使用者省下了的時間，預估加起來超過200年!](https://blog.google/products/search/how-google-autocomplete-works-search/#jump-content:~:text=Cumulatively%2C%20we%20estimate%20it%20saves%20over%20200%20years%20of%20typing%20time%20per%20day.%20Yes%2C%20per%20day!) 它幫助使用者省去輸入時間、幫助Google更了解你在找什麼、同時也讓SEO工作者在做關鍵字研究時多一個管道。
+
+這篇文章，要示範怎麼**把自動完成所預測的字，以及每個預測字的再下一層預測字，下載成CSV檔**，方便後續整理，相信可以省去不少複製貼上時間，也祝大家可以從中洞察出更好的機會! 
+
+
+---
+
+## 工具使用及須知
+
+為了節省大家時間，下面直接把使用的方法和步驟列出，有興趣了解更多的話後面有更仔細的介紹。另外也歡迎轉發或以此工具做為基底更加擴張，但請著名出處來源\~
+
+### 1\. 打開Google Colab檔案
+
+點開這個[連結](https://colab.research.google.com/drive/1oU-ZxI0t_36DJmFzDdrd3D-5ikv1heV0)，會看到一份「*數位引擎 – Google自動完成關鍵字抓取.ipynb*」的檔案，可以直接在上面操作，也可以像Google Doc一樣拷貝一份自己的版本。
+
+![step 1 1](https://www.darrenhuang.com/wp-content/uploads/2020/11/step-1-1-1024x379.png)
+### 2\. 輸入待查詢搜尋字
+
+在下圖紅色箭頭的地方輸入想查的字，一次輸入一個字。
+
+![step 2 1](https://www.darrenhuang.com/wp-content/uploads/2020/11/step-2-1-1024x379.png)
+### 3\. 執行
+
+點擊「執行階段」\>「全部執行」，或者快捷鍵Ctrl(Cmd)\+F9。
+
+![step 3 1](https://www.darrenhuang.com/wp-content/uploads/2020/11/step-3-1-1024x379.png)
+### 4\. 下載生成CSV檔。
+
+滾到下面會看到「完成」，之後到左邊導覽列的資料夾中找到「output.csv」然後下載。
+
+![step 4 2](https://www.darrenhuang.com/wp-content/uploads/2020/11/step-4-2.png)
+### 5\. 完成
+
+用Excel打開就能看到所輸入的原始關鍵字，第一層和第二層的自動完成預測字詞。
+
+![step 5 1](https://www.darrenhuang.com/wp-content/uploads/2020/11/step-5-1.png)
+這項工具免費分享給大家使用，但如果有其他的需求，例如跑大量關鍵字資料、更換語言or地區、自動化、或其他想法，歡迎繼續閱讀了解如何自行修改，或來信詢問商業上的合作。
+
+
+---
+
+## 自動完成關鍵字的資料從何而來?
+
+Google搜尋的自動完成功能有一個較鮮為人知的API，這支API不需要金鑰也不需要驗證，相當的簡單。但是，**這支API並沒有被Google所公開，是偏門的非正統途徑，[在2015年的公告](https://developers.google.com/search/blog/2015/07/update-on-autocomplete-api)中，Google宣稱非授權的使用都可能有一天失效。**
+
+儘管如此，到現在這個API都還可以使用，且產出的資料相當準確。我認為可以把它當作一個額外的工具利用，但不要去過度仰賴，因為 (1\.)這個API並不是Google所認可的方法，(2\.)工具可能隨時失效 (屆時，還請留言告知\~)
+
+![google自動完成API公告](https://www.darrenhuang.com/wp-content/uploads/2020/11/google自動完成API公告-1024x516.png)
+2015\.07 Google對於自動完成API的公告
+
+
+---
+
+## 自動完成API簡介
+
+Google自動完成API的結構非常簡單，發一個GET request到目標位置就可以拿回一個JSON檔案，裡面即含有搜尋時的自動完成的預測字詞。
+
+* API位置: `http://suggestqueries.google.com/complete/search`
+* 參數:
+	+ `output` \= 必要，firefox or chrome
+	+ `q` \= 必要，搜尋字，空格以加號相連(\+)
+	+ `hl` \= 非必要，語言設定 (例如 en, zh\-TW, jp)
+	+ `gl` \= 非必要，地區設定 (例如 us, tw, sg)
+
+實例: 在網址列輸入 `http://suggestqueries.google.com/complete/search?output=firefox&q=台積電&hl=zh-tw&gl=tw` 就能看到回傳的檔案。
+
+
+---
+
+## Google搜尋自動完成關鍵字下載工具介紹
+
+這個小工具用的是Python，並佈署在Google Colab上讓大家都能使用，安裝的插件就是幾個常見的 `requests`, `json`, `fake_useragent`, `pandas`, `time` 。語言和地區預設是`zh-TW`和`TW`，這部分可以自行修改。
+
+這個script並不難，主要是因為API簡單，我認為很適合和Python入門者拿來練習，寫法的部分就不班門弄斧了，但應用方面，有幾個粗略的想法歡迎大家參考:
+
+1. 串接搜尋量資料庫，CSV中加入一欄秀出每個預測字的搜尋量
+2. 將搜尋結果中的「相關搜尋」預測字一併納入
+3. 抓回搜尋結果前10名的網頁，並判斷有多少比例的網頁在標題or描述中有出現該關鍵字
+4. 更好的視覺化呈現
+
+歡迎大家一起討論，如果有成功做出來也歡迎在留言區分享你的代碼連結!
+
+
+---
+
+## 參考資料
+
+* [Query Google Suggestions API with Python [by importSEM]](https://importsem.com/query-google-suggestions-api-with-python/)
+* [Keyword Suggestions using the Google Suggest API and Google Apps Script [by Blueclaw Media]](https://www.blueclaw.co.uk/2020/02/06/keyword-suggestions-using-the-google-suggest-api-and-google-apps-script/)
+* [StreamSuggest: Get Google \& Bing Autocomplete suggestions at scale! [by Charly Wargnier]](https://www.charlywargnier.com/post/streamsuggest)
+
+

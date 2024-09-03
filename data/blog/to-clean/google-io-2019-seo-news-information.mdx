@@ -1,0 +1,113 @@
+---
+title: Google I/O 2019 – SEO相關整理
+date: 2019-05-11
+tags: ['Uncategorized']
+draft: false
+summary: 2019的Google開發者大會於5/7~5/9舉行，一起來看看與SEO相關的情報有哪些吧!
+images: []
+---
+
+2019的Google開發者大會 – Google I/O在上週圓滿落幕，除了搶眼的Pixel 3A、每年都會出現的Android Q、和不斷進步的Google語音助手外，一起來看看與SEO有關的新情報有哪些吧!
+
+![google io 2019](https://www.darrenhuang.com/wp-content/uploads/2019/05/google-io-2019.gif)
+* [Googlebot使用最新Chromium來解譯Javascript](#evergreen-googlebot)
+* [Google搜尋中的AR擴增實境](#3d-image)
+* [Search Console新增「網站速度報告」](#speed-report)
+* [搜尋結果將新增兩種Featured Snippets – How\-to\&FAQ](#new-fs)
+* [往上滑閱讀更多 – Swipe Up to Navigate](#swipe-up-navigation)
+
+## Googlebot使用最新Chromium來解譯Javascript
+
+> 摘要 – 從現在開始，Googlebot看到的網站和 Chrome瀏覽器看到的網站是一樣的，不用擔心WRS的不同所引發的SEO問題。
+
+以往Google都是使用Chrome 41來render網站上的JavaScript。Chrome 41是2015年三月發布的版本。可想而知，隨著時代改變，很多新的JS功能在當時並沒有被支援，這也導致網站中若使用新技術的JS，Googlebot不一定可以看到正確的內容，因此衍生出許多SEO問題。
+
+在這次Google I/O上宣布，現在開始Googlebot所使用的 WRS (Web Rendering Service)，將改為當下最新的Chrome 74，並且未來會持續用最新的Chrome來當作WRS。這意味著SEO們不用擔心用Chrome看到的網站和Googlebot看到的網站會有所不同。
+
+
+> Our session on [\#javascript](https://twitter.com/hashtag/javascript?src=hash&ref_src=twsrc%5Etfw) and [\#seo](https://twitter.com/hashtag/seo?src=hash&ref_src=twsrc%5Etfw) at 1:30pm tomorrow will be LIT🔥🔥🔥  
+> Come to stage 3 to see what it's all about 🙃  
+>   
+> Amongst other things, we'll talk:  
+> 🏗️Web app architectures   
+> 🤖Googlebot   
+> ⚡️Lazy loading  
+> 🚀Web APIs  
+> 🔬Testing  
+> 📈Crawl budget \& more!<https://t.co/6CGsiGgg9w> [pic.twitter.com/b4MnvpSmWt](https://t.co/b4MnvpSmWt)
+> 
+> — Martin Splitt (@g33konaut) [May 9, 2019](https://twitter.com/g33konaut/status/1126412496754159616?ref_src=twsrc%5Etfw)
+
+* 註1: Render仍然需要時間以及會有delay
+* 註2: 目前的googlebot的user\-agent仍是顯示41，未來會更新
+* 官方部落格文章 – [The new evergreen Googlebot](https://webmasters.googleblog.com/2019/05/the-new-evergreen-googlebot.html)
+* Google I/O 2019演講影片 – [Google Search and JavaScript Sites](https://www.youtube.com/watch?v=Ey0N1Ry0BPM)
+
+## Google搜尋中的AR擴增實境
+
+> 摘要 – Google搜尋結果上將可以透過手機鏡頭，使一項產品以AR的方式放置在使用者的周遭環境下，對電商網站影響深遠。
+
+Google將結合AR的技術，使網頁上的3D物件(.glb檔) 能夠直接在搜尋結果上預覽。撇開SEO來說這也是電商網站用來呈現產品相當酷的一種方式，現在又更值得投資了。
+
+
+> Often, seeing is understanding. New features in Google Search and Google Lens use the camera, computer vision and AR to overlay visual information onto your physical surroundings → <https://t.co/rrvrEE60Hl> [\#io19](https://twitter.com/hashtag/io19?src=hash&ref_src=twsrc%5Etfw) [pic.twitter.com/yCEO1gIky4](https://t.co/yCEO1gIky4)
+> 
+> — Google (@Google) [May 7, 2019](https://twitter.com/Google/status/1125812833793581056?ref_src=twsrc%5Etfw)
+
+* 官方文章 – [Helpful new visual features in Search and Lens](https://www.blog.google/products/search/helpful-new-visual-features-search-lens-io/)
+* Google I/O 影片 – [Google Keynote](https://youtu.be/TQSaPsKHPqs?t=367)
+
+## Search Console新增「網站速度報告」
+
+> 摘要 – Google Search Console裡面將新增 Speed Report，數據來源為Chrome的用戶體驗報告(CrUX)。
+
+CrUX全名為Chrome User Experience，是實際透過收集Chrome使用者在載入網站時的網站速度，整理而來的Field Data，相對於一般的網站速度分析工具所得到的Lab Data，更能反映出網站的表現。
+
+這份資料是公開的，每月儲存在[Google BigQuery](https://bigquery.cloud.google.com/table/chrome-ux-report:all.201903)中，未來將能夠直接從Google Search Console中分析這份資料。目前還沒有太多的資訊只有一些截圖流出，**但可以透過**[**這個表格**](https://docs.google.com/forms/d/e/1FAIpQLSfCpmZbF7t0lZbyXuc6rsB8CiB3ySifqe4Vn-58A9pCbFTGfw/viewform)**，申請加入這項功能的封測!** 
+
+![speed report in gsc](https://www.darrenhuang.com/wp-content/uploads/2019/05/speed-report-in-gsc-1024x516.png)
+([資料來源](https://twitter.com/igrigorik/status/1126362259553316864))
+
+## 搜尋結果將新增兩種Featured Snippets
+
+> 「How\-to」 和「FAQ」兩種內容的網頁，將可以透過Schema Markup結構化標記，在Google搜尋結果中有不一樣的呈現。
+
+### 1\. 新標記「Howto」：用於「如何…」類型的內容
+
+「How\-to」主要用於有清楚步驟的內容，內容格式可以是文字、圖片、或影片。下圖左邊為*如何安裝磁磚*的文章，在搜尋結果中直接秀出所需的步驟、時間、以及準備工具和材料。下圖右邊則為如何打領帶的文章，搜尋結果直接以圖片表達每一個步驟。
+
+
+> 📢 New in structured data! 📢  
+>   
+> Today we are announcing support for FAQ and How\-to structured data on Google Search and Google Assistant, including new reports in Search Console to monitor how your site is performing. <https://t.co/EXhtqzN9Ak> [pic.twitter.com/rwbkV1qmGn](https://t.co/rwbkV1qmGn)
+> 
+> — Google Search Central (@googlesearchc) [May 8, 2019](https://twitter.com/googlesearchc/status/1126151454652166145?ref_src=twsrc%5Etfw)
+
+### 2\. 新標記「FAQ」：用於「常見問題」類型的內容
+
+「FAQ」是常見問題， 適用於頁面上有一個或多個問題與答案的情況。很多公司都會有一個**常見問題**的頁面，這個Schema Markup可以幫助網站內容直接在搜尋結果出現使用者所找尋的答案。
+
+![FAQ Markup](https://www.darrenhuang.com/wp-content/uploads/2019/05/FAQ-Markup.png)
+* 註: 除了搜尋結果，標記為FAQ或Howto的內容也可能會出現在Google語音助手的問答中
+* 官方文章 – [New in structured data: FAQ and How\-to](https://webmasters.googleblog.com/2019/05/new-in-structured-data-faq-and-how-to.html)
+* [Schema Markup標記指南 — 「How\-to」](https://developers.google.com/search/docs/data-types/how-to)
+* [Schema Markup標記指南 — 「FAQ」](https://developers.google.com/search/docs/data-types/how-to)
+
+## 往上滑閱讀更多 – Swipe Up to Navigate
+
+> 從Google圖片的搜尋結果上，用戶可以對感興趣的圖片往上滑，直接閱讀圖片來源的文章。
+
+Google前陣子特別強調圖片在SEO的重要性，因為很多用戶喜歡更視覺化的資訊傳遞。
+
+這項更新是一個很好的例子，當用戶在Google圖片的搜尋結果時，若對某張圖片感興趣，只要輕輕往上滑，該頁的內容就會載入。這項特色的前提條件是該網站必須要是AMP頁面，才能有如此即時的用戶體驗!
+
+
+> Showing preview of [\#AMP](https://twitter.com/hashtag/AMP?src=hash&ref_src=twsrc%5Etfw) pages over Google Image results is something new?[@rustybrick](https://twitter.com/rustybrick?ref_src=twsrc%5Etfw) [pic.twitter.com/ElVXYArLkQ](https://t.co/ElVXYArLkQ)
+> 
+> — Jose Varghese (@IamJoseVarghese) [March 23, 2019](https://twitter.com/IamJoseVarghese/status/1109404147508342784?ref_src=twsrc%5Etfw)
+
+## 小結
+
+以上是五點這次跟SEO較相關的新聞，希望有幫助到你! 如果有問題，或者有想補充的資訊，歡迎留言和我互動!
+
+
