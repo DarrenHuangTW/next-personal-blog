@@ -1,0 +1,194 @@
+---
+title: SEO電子報第六十八期 – 2022.11.01~2022.11.15
+date: 2022-11-15
+tags: ['SEO電子報']
+draft: false
+summary: 在整理這期電子報的時候我自己也吸收了不少，尤其是第二和第四點的研究報告，裡面有很多不錯的數據可以拿來引用；第九點的podcast中談到Google Search Central在網站搬遷時還請了外部SEO agency來幫忙，相當有趣；最後是第五點的AI工具，非常簡單上手，推薦大家都可以玩玩!
+images: []
+---
+
+在整理這期電子報的時候我自己也吸收了不少，尤其是第二和第四點的研究報告，裡面有很多不錯的數據可以拿來引用；第九點的podcast中談到Google Search Central在網站搬遷時還請了外部SEO agency來幫忙，相當有趣；最後是第五點的AI工具，非常簡單上手，推薦大家都可以玩玩!
+
+* [[公告] 付費客戶的舊版GA退役時間延長](http://43.201.249.211/seo-newsletter-issue-68.html#toc-1)
+* [[報告] 2022 Web Almanac 網路年鑑報告](http://43.201.249.211/seo-newsletter-issue-68.html#toc-2)
+* [[新聞] Google商家推出新介面，以及如何回到舊介面](http://43.201.249.211/seo-newsletter-issue-68.html#toc-3)
+* [[研究] 無點擊(zero\-clicks)搜尋 by Semrush](http://43.201.249.211/seo-newsletter-issue-68.html#toc-4)
+* [[工具] 在Google Sheets上用AI生出文案和圖片](http://43.201.249.211/seo-newsletter-issue-68.html#toc-5)
+* [[技術] 使用fetchpriority來優化LCP](http://43.201.249.211/seo-newsletter-issue-68.html#toc-6)
+* [[遊戲] 「被遺忘權」互動影片](http://43.201.249.211/seo-newsletter-issue-68.html#toc-7)
+* [[影片] Service Worker 兩三事](http://43.201.249.211/seo-newsletter-issue-68.html#toc-8)
+* [[摘要] Search Central文件與SEO](http://43.201.249.211/seo-newsletter-issue-68.html#toc-9)
+* [[摘要] BrightonSEO現場Q\&A](http://43.201.249.211/seo-newsletter-issue-68.html#toc-10)
+
+
+---
+
+## [公告] 付費客戶的舊版GA退役時間延長
+
+大家應該都已經知道Universal Analytics將於[2023年的七月一號](http://43.201.249.211/seo-newsletter-issue-53.html#toc-1)開始不再蒐集資料。最近Google宣布，付費用戶(Universal Analytics 360\)的這項到期日限將延到2024年七月。
+
+付費版GA的價格是每年至少$150k美金，所以網站還沒裝好GA4的還是死了這條心，趕快習慣GA4吧。
+
+另外最近看到這個診斷GA4的Looker Studio模板，可以看出GA4帳號離資料蒐集上限還有多遠、所有的events (以及是否為conversions)…等等。資料太大就會跑起來很慢，但滿有趣的可以套一下自己的帳號玩看看。
+
+![image 13](http://43.201.249.211/wp-content/uploads/2022/11/image-13.png)
+GA診斷模板 ([twitter連結](https://twitter.com/IKAUE_/status/1590988222272016384))
+
+連結: [公告](https://blog.google/products/marketingplatform/analytics/Turn-insights-ROI-Google-Analytics/)
+
+
+---
+
+
+## [報告] 2022 Web Almanac 網路年鑑報告
+
+Web Almanac (網路年鑑) 是 HTTP Archiv一年一度的報告，分析了網路的現況、包括使用的技術、平台、安全性、效能…等等，當然也包括了與我們工作比較相關的SEO和Schema Markup章節，以下摘錄幾個有趣的數據: 
+
+* 僅有4\.1%的網頁有\<iframe\>這個元件，使用[`indexifembedded`](http://indexifembedded)這個今年新推出的標籤的網頁僅有0\.0015%
+* \~12\.7%的網頁在\<head\>中有出現不該出現的標籤，這可能導致googlebot誤判\<head\>已經結束而造成SEO問題 ([參考](https://developers.google.com/search/docs/crawling-indexing/valid-page-metadata))
+* 手機網頁的CWV通過率有39%。2021年為29%，2020年為20%，相比下來進步不少
+* 僅有20%左右的網頁有使用image lazy loading
+* 結構化資料的格式 – 62%使用JSON\-LD；35%使用Microdata
+* 手機網頁的AMP使用率從2021年的0\.22%掉到2022年的0\.19%
+
+連結: [Web Almanac 2022報告](https://almanac.httparchive.org/en/2022/) / [2021介紹](http://43.201.249.211/seo-newsletter-issue-46.html#toc-4) / [2020介紹](http://43.201.249.211/seo-newsletter-issue-31.html#toc-9)
+
+
+---
+
+
+## [新聞] Google商家推出新介面，以及如何回到舊介面
+
+Google商家 (Google Business Profile) 在去年推出可以直接在Google搜尋上管理商家檔案的功能，而最近有人注意到從商家檔案管理員(Business Profile Manager)進到各個商家時，會被強迫導到Google搜尋的畫面，而不能在舊有的manager介面上管理。對一次需要管理大量地方商家帳號的人來說很不方便，造成Local SEO圈子一片哀嚎。
+
+![image 14](http://43.201.249.211/wp-content/uploads/2022/11/image-14-1024x614.png)
+Google去年推出的功能，讓商家在Google Search的介面直接管理 ([圖片來源](https://www.searchenginejournal.com/google-business-profile-overview/425984/#close))
+
+不過Twitter上有不少人找到切回舊介面的方法([方法1](https://twitter.com/mblumenthal/status/1586754087080660992) / [方法2](https://twitter.com/Anuj_Thaker03/status/1588234589926879232))，因此習慣舊介面的人還是可以改回去，只是這些方法有可能會在之後失效，
+
+連結: [SER報導](https://www.seroundtable.com/google-business-profile-manager-redirects-34359.html)
+
+
+---
+
+
+## [研究] 無點擊(zero\-clicks)搜尋 by Semrush
+
+Semrush出了一份研究，要來討論使用者在輸入一個搜尋字以後，在Google SERP上的行為。研究將SERP上的行為分成五種:
+
+* **Organic clicks**
+* **Paid clicks**
+* **Google clicks**: URL改變，但仍然是Google的網址，且搜尋字不變。可能原因是從一般搜尋跑到shopping, images, news…etc。
+* **Google keyword change**: URL改變，但仍然是Google的網址，但搜尋字改變，可能原因是做了其他搜尋或點了Google的參考搜尋字。
+* **Other zero clicks**: 扣除上面四種後剩下的行為，主要就是什麼都沒有點的人。
+
+![image 10](http://43.201.249.211/wp-content/uploads/2022/11/image-10-1024x710.png)
+手機使用者在SERP上的五種行為比例 (paid clicks好像有點過低..)
+
+![image 7](http://43.201.249.211/wp-content/uploads/2022/11/image-7-1024x742.png)
+有45\.5 %的桌面使用者在5秒內完成了下一個動作 
+
+![image 11](http://43.201.249.211/wp-content/uploads/2022/11/image-11-853x1024.png)
+“Google Clicks”的更細節分析
+
+連結: [Semrush原文](https://www.semrush.com/blog/zero-clicks-study/)
+
+
+---
+
+
+## [工具] 在Google Sheets上用AI生出文案和圖片
+
+這項工具是由[Danny Richman](https://twitter.com/DannyRichman/status/1589675313461530625)所分享，只要輸入產品名稱，就會自動幫你判斷消費者的情感連結、生出一段文案、並且產生一張圖片。情感連結的部分也可以選擇自己輸入，讓AI幫你產出文案和圖片就好。
+
+![image 15](http://43.201.249.211/wp-content/uploads/2022/11/image-15-1024x264.png)
+僅在第一格輸入 “Mountain bikes”，就能產出剩下的資訊
+
+![image 17](http://43.201.249.211/wp-content/uploads/2022/11/image-17-1024x263.png)
+將 Emotional Goal 改為 “to feel safe”，會獲得不同的文案和圖片
+
+使用這工具會需要OpenAI的免費API，文章中有詳細介紹流程，註冊帳號加試玩這個工具不會超過3分鐘，推薦大家有空試試!
+
+連結: [工具介紹](https://www.seotraininglondon.org/gpt3-goal-copy-generator/) / [工具連結](https://t.co/2irIxHxVbm)
+
+
+---
+
+
+## [技術] 使用`fetchpriority`來優化LCP
+
+`fetchpriority`這個HTML屬性可以告知瀏覽器一項資源的抓取優先級。瀏覽器在render一個網頁的時候，會根據各種不同的因素(ex:檔案的屬性、位置…etc)來決定哪個資源應該優先獲取(fetch)，而這個屬性可以更進一步確保想要提前載入的資源(例如 LCP) 有較高的順序。
+
+很多人可能會將兩者搞混，但`fetchpriority="high"`和`rel="preload"` 是有所不同的。後者是幫助瀏覽器提早”發現”要下載的資源，而前者則是幫助瀏覽器判斷待下載的資源哪個應該優先處理。
+
+![image 19](http://43.201.249.211/wp-content/uploads/2022/11/image-19-1024x576.png)
+連結: [web.dev文章](https://web.dev/priority-hints/) / [瀏覽器支援狀況](https://caniuse.com/?search=fetchpriority) / [Etsy的優化案例](https://www.etsy.com/codeascraft/priority-hints-what-your-browser-doesnt-know-yet)
+
+
+---
+
+
+## [遊戲] 「被遺忘權」互動影片
+
+Google推出了這個YouTube的*互動影片*，讓大家以審查者的角度，在接收到「被遺忘權 (right to be forgotten)」的申請時，應該做出何種裁定。
+
+對於被遺忘權不熟悉可以參考[過去的介紹](http://43.201.249.211/seo-newsletter-issue-51.html#toc-8)或是[Google的文件](https://support.google.com/legal/answer/10769224)，影片中的問題有下列三個，如果不確定推薦玩看看，並聽影片中的解釋。
+
+* Peter正在競選為公眾人物，他想將關於他的誹聞從Google上移除，可以嗎?
+* 十幾年後Peter退休成為了一名園丁，他想將過去關於他政壇的新聞移除，可以嗎?
+* Peter的園丁事業破產了，政府在官方網站上列出了Peter事業的債務情況，Peter又想申請移除，可以嗎?
+
+
+註: 互動式影片可能要用電腦開才能正常玩
+
+
+---
+
+
+## [影片] Service Worker 兩三事
+
+
+影片裡Martin找來 Dave Smart 聊 Service Worker 這個主題。[過去的podcast](http://43.201.249.211/seo-newsletter-issue-38.html#toc-10)曾經有稍微提過，Service Worker 最常見的兩個用途分別是讓網頁可以離線閱讀，還有發送推播。
+
+看起來不太影響Google爬蟲的網路技術，卻總會在被「創意」使用的情況下，造成SEO影響。Dave在這支影片中分享他所遇過的幾種極端狀況，以及如何偵錯。
+
+我自己還沒有接觸過因為service worker造成問題的網站，因此看完學到滿多的，包括對service worker的概念、在DevTools中怎麼關閉、何種情形可能會造成問題、如何與工程師溝通…等等。
+
+
+---
+
+
+## [摘要] Search Central文件與SEO
+
+
+這集由John和Lizzy聊聊的Google Search Central上的文件，Lizzy的主要腳色是technical writer，她承認在她加入這個組之前她根本不知道什麼是SEO，她在生產內容時也沒有特別考量要怎樣才會讓這些SEO文件更”SEO Friendly”。
+
+由於Lizzy負責developers.google.com這個網站上跟搜尋有關的文件，因此也被指派負責該站的SEO，John就藉此問題問了她很多SEO的基本觀念，例如redirect, sitemap, robots.txt…等等。聽起來很像面試官在問新人對網站做過什麼SEO的優化。
+
+有空的人還是可以聽看看，裡面有一些很有趣的小故事，像是有次sitemap出了問題要請工程師修，但工程師反而去看Google的sitemap然後說這不是個大問題不願優先處理；或是他們在兩三年前網站改版時雇用了外面的SEO agency，給了他們一堆建議。
+
+連結: [逐字稿](https://traffic.libsyn.com/secure/search-off-the-record/Search_Off_the_Record_-_49th_episode_.pdf)
+
+
+---
+
+
+## [摘要] BrightonSEO現場Q\&A
+
+
+這集的Podcast是在十月中[Brighton SEO](http://43.201.249.211/seo-newsletter-issue-67.html#toc-5)的活動上，John和Lizzy的公開Q\&A所錄製而成，由主持人整理現場來賓的問題對兩人提問\+閒聊。有空的話可以聽看看，感受一下國外conference的氛圍，至於內容的部分還是官方回答居多。
+
+**Subdomain vs Subfolder** – John說大家都知道subdomain理論上會被視為另一個網站，但他去問Google的搜尋工程師該如何對外回答這個問題時，他得到的答案是兩者沒有差別。
+
+**Link Building** – John說他可以想像未來外鏈的影響會越來越低，尤其是當Google越來越能知道什麼時候該給出什麼樣的內容。從crawling的角度來看連結還是很重要，它幫我們發現新的網頁，但排名的部分重要性會越來越低，其實相對過去已經低了許多。
+
+**每一頁都要放上Organization的Schema嗎** – Lizzi回答不必要，但如果真的這麼做也不會怎樣。Schema不僅是Google或SEO的東西，站長要使用Google不支援的schema屬性也才完全是沒差。
+
+連結: [逐字稿](https://traffic.libsyn.com/secure/search-off-the-record/Search_Off_the_Record_-_50th_episode.pdf)
+
+
+---
+
+希望有在接觸crypto的人一切都安好… 😟
+
+

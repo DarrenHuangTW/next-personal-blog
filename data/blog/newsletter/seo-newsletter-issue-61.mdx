@@ -1,0 +1,198 @@
+---
+title: SEO電子報第六十一期 – 2022.07.15~2022.07.31
+date: 2022-08-01
+tags: ['SEO電子報']
+draft: false
+summary: 這期的內容主要是文章的推薦，全部讀完會需要一些時間，有盡量幫大家把摘要列出來，但還是希望有空的人可以自行閱讀原文。第四和第五點的標題看起有點普通，不過裡面教的東西很值得一讀~ 最後個人認為收穫最大的是第八點的Fuzzy Matching，找個時間要來好好研究這個技術和其應用!
+images: []
+---
+
+這期的內容主要是文章的推薦，全部讀完會需要一些時間，有盡量幫大家把摘要列出來，但還是希望有空的人可以自行閱讀原文。第四和第五點的標題看起有點普通，不過裡面教的東西很值得一讀\~ 最後個人認為收穫最大的是第八點的Fuzzy Matching，找個時間要來好好研究這個技術和其應用! 
+
+* [[新聞] GSC新增CNAME驗證方式](http://43.201.249.211/seo-newsletter-issue-61.html#toc-1)
+* [[趣文] 隱藏網站 XML Sitemap](http://43.201.249.211/seo-newsletter-issue-61.html#toc-2)
+* [[工具] Google試算表結合GSC URL Inspection](http://43.201.249.211/seo-newsletter-issue-61.html#toc-3)
+* [[好文] 電商網站增加外鏈的五個方法](http://43.201.249.211/seo-newsletter-issue-61.html#toc-4)
+* [[實用] Data Studio的進階GSC分析應用](http://43.201.249.211/seo-newsletter-issue-61.html#toc-5)
+* [[資訊] CrUX的資料如何被記錄](http://43.201.249.211/seo-newsletter-issue-61.html#toc-6)
+* [[技巧] 用Screaming Frog找到內部連結機會](http://43.201.249.211/seo-newsletter-issue-61.html#toc-7)
+* [[學習] Fuzzy Matching與其SEO應用](http://43.201.249.211/seo-newsletter-issue-61.html#toc-8)
+* [[影片] CMS(內容管理系統)是否影響SEO?](http://43.201.249.211/seo-newsletter-issue-61.html#toc-9)
+* [[摘要] Barry Schwartz 專訪](http://43.201.249.211/seo-newsletter-issue-61.html#toc-10)
+
+
+---
+
+## [新聞] GSC新增CNAME驗證方式
+
+GSC的驗證分成domain或者url\-prefix兩種類型，以往domain驗證只能使用DNS中的TXT紀錄來完成，現在新增可以用CNAME來完成。個人認為這個改動沒什麼太大意義，因為一般TXT跟CNAME紀錄的權限是一起的，有更動CNAME的權限就能更動TXT。
+
+![image 16](http://43.201.249.211/wp-content/uploads/2022/07/image-16.png)
+[官方公告](https://twitter.com/googlesearchc/status/1549688718629429255)
+
+DNS域名中有多個「紀錄」，可以用來提供關於該網域的額外資訊，CNAME和TXT只是其中兩個，另外常見的還有A、AAAA、NS…等等，如果有興趣學更多可以參考這篇[中文文章](https://asper.tw/dns/)。
+
+
+---
+
+
+## [趣文] 隱藏網站 XML Sitemap
+
+我們都知道站點地圖對SEO的重要性，它讓Google抓取網站更有效率。但於此同時，它也讓對手非常輕易就能一覽整個網站，得知對手的sitemap位置並定期監控更能在新產品(頁面)推出時立即得知。
+
+這篇文章講了很多關於sitemap的細節，主軸是環繞在怎樣才能讓sitemap有效卻又不會輕易被有心人士找到；但換句話說，也提到了幾種找到對手sitemap的方法，如果還不知道怎麼做可以學一下!
+
+其中一點很有趣的是使用redirect，例如通知GSC站點地圖的位置是在[`http://ohgm.co.uk/pastebin-sitemap`](http://ohgm.co.uk/pastebin-sitemap)，但點過去會被轉址到一個完全不同的網域，這樣的方式在GSC中仍會成功。
+
+![image 14](http://43.201.249.211/wp-content/uploads/2022/07/image-14-1024x543.png)
+GSC中給的sitemap位置轉址到別的網域仍會被接受
+
+連結: [隱藏xml sitemap](https://ohgm.co.uk/hiding-xml-sitemaps/)
+
+
+---
+
+
+## [工具] Google試算表結合GSC URL Inspection
+
+[Search Analytics for Sheets](https://searchanalyticsforsheets.com/) 這個非常實用的Google試算表外掛最近有一項更新，可以結合 URL Inspection (網址檢測)，將結果直接吐回在試算表中，非常實用!
+
+![Search Analytics for Sheets Google 試算表](http://43.201.249.211/wp-content/uploads/2022/07/Search-Analytics-for-Sheets-Google-試算表-1024x462.png)
+URL Inspection結果
+
+這項工具使用起來相當簡單，授權後只要點幾下就能有上面的結果，值得一提的這功能仍然受到每天2000次的限制，並且跑起來會需要一些時間。
+
+若對這項工具不熟悉，除了輕易將GSC資料抓下來以外，還有原本就有的自動備份功能，能設定每三個月自動備份並通知，同樣也是點幾下就能完成，推薦給大家!
+
+連結: [工具官網](https://searchanalyticsforsheets.com/) / [工具下載](https://workspace.google.com/marketplace/app/search_analytics_for_sheets/1035646374811) / [網址檢測工具介紹](http://43.201.249.211/seo-newsletter-issue-50.html#toc-1)
+
+
+---
+
+
+## [好文] 電商網站增加外鏈的五個方法
+
+這篇文章分享五個電商網站能獲得[反向連結](https://www.darrenhuang.com/what-is-backlink-in-seo.html)的方式，很久沒有分享這種較基礎的文章，最近工作關係接觸很多電商網站，因此讀起來特別有感，儘管裡面的方法並非完全沒見過，但Ahrefs這篇文章的架構跟敘事方式，都非常直接易暸，推薦給大家!
+
+![image 1](http://43.201.249.211/wp-content/uploads/2022/08/image-1-1024x358.png)
+在Google上找出沒有包含你的品牌的商品評論文
+
+![image](http://43.201.249.211/wp-content/uploads/2022/08/image-1024x345.png)
+用上面這個方法，找到其他有”where to buy”內容的網頁
+
+連結: [Ahrefs電商外鏈](https://ahrefs.com/blog/ecommerce-link-building/)
+
+
+---
+
+
+## [實用] Data Studio的進階GSC分析應用
+
+文章的標題是「*Search Console: Data Studio template to run a risk\-free analysis*」，老實說有點不知所云。
+
+推薦這篇文章主要是因為我自認對Data Studio還算熟悉，但看完這篇文章還是學到了不少新招，下面列幾個文中提及的技巧截圖。
+
+![image 2](http://43.201.249.211/wp-content/uploads/2022/08/image-2.png)
+GDS中將關鍵字依據字數分類 
+
+![image 3](http://43.201.249.211/wp-content/uploads/2022/08/image-3-1024x230.png)
+列出點擊或曝光的百分比
+
+![image 4](http://43.201.249.211/wp-content/uploads/2022/08/image-4-1024x229.png)
+拉出最高點、最低點、和平均值參考線
+
+連結: [原文](https://merci-larry.com/search-console-data-studio-template-risk/)
+
+
+---
+
+
+## [資訊] CrUX的資料如何被記錄
+
+[Chrome User Experience (CrUX)](https://www.darrenhuang.com/core-web-vitals-lcp-fid-cls.html#crux) 是Google提供的公開資料集，裡面紀錄了每個月Chrome用戶在瀏覽網頁時的網頁表現(performace)。Google在七月中發了篇文章，詳細的解釋CrUX的資料是怎麼被記錄的。這屬於很細節的SEO相關知識，有興趣的可以閱讀原文，下面列幾個個人覺得有意思的地方:
+
+1. 網頁如果不能被收錄，就不會被記在網域等級(origin level)的CrUX資料中
+2. 網域(origin)和網頁(page)都要足夠受歡迎才能看到他們的CrUX資料，「受歡迎」指的是訪客數量要達到一個最低標準，數量不會公開，但網域和網頁的標準是一樣的
+3. 在網頁等級(page level)的資料中，Chrome會試著處理掉一些常見參數(例如`utm_medium=email`或`#main`)，但並不保證能完全地將參數資料清乾淨
+4. 有幾個Chromium的平台的數據不會記載CrUX中，例如iOS版的Chrome和Mircrosoft Edge (骨架和Chrome相同)
+5. AMP網頁能正確的被記錄
+
+連結: [CrUX如何紀錄資料](https://developer.chrome.com/docs/crux/methodology/)
+
+
+---
+
+
+## [技巧] 用Screaming Frog找到內部連結機會
+
+相當簡單直接的一套步驟，雖然文章提到Screaming Frog，但其實沒有購買該工具也能做到，重要的是背後的原理:
+
+1. 從SEMRush選出網站排名在5\~15左右的關鍵字，這些字排名往前所帶來的效益往往最大
+2. 透過Screaming Frog的Search功能，爬一次網站，把有包含這些字的網頁都列出
+3. 這些頁面可能就是適合放上內部連結，連到目標頁面，進一步提升排名的好機會
+4. 若結果顯示沒太多網頁提過目標關鍵字，那更是好好充實該主題相關內容的機會
+
+![image 15](http://43.201.249.211/wp-content/uploads/2022/07/image-15.png)
+善用 Screaming Frog 的 Search 功能，找出網站上有提到目標關鍵字的網頁
+
+如果沒有這些工具，可以用GSC取代SEMRush來找出目標關鍵字，內部連結的機會則使用`"target keyword" site:www.example.com`，讓Google來幫你判斷網站那些頁面有提過這些字。
+
+連結: [利用Screaming Frog找出內部連結機會](https://www.mikeginley.com/blog/internal-linking-best-practices-for-seo/)
+
+
+---
+
+
+## [學習] Fuzzy Matching與其SEO應用
+
+Fuzzy Matching指的是利用數學的方式，比較兩個字串(string)，然後將其相似程度的高低用0\~1表示，1代表完全一樣。這個概念在SEO中有很多能派上用場的地方，例如:
+
+1. 比較兩列網址，為其中一列的每條網址，選出在另一列中與其最為相似的網址。可以用在網址更動時的 redirect mapping，或是當你有一堆404的網址然後想快速判斷適合的轉址位置。
+2. 比較一堆文章的內容，根據文章中的用字，來找出可能有相似內容的文章，來找出可能的內部連結機會。
+3. 分類關鍵字，例如coca\-cola和coca cola和cocacola，這幾個字拼法不完全匹配，但用fuzzy matching輔助就容易判斷其相識性。
+
+![image 19](http://43.201.249.211/wp-content/uploads/2022/07/image-19-1024x582.png)
+Fuzzy Matching應用舉例 ([影片來源](https://www.youtube.com/watch?v=Ft5lxsXIGfE))
+
+最近SEO社群有人寫了[一篇文章](https://lazarinastoy.com/ultimate-guide-to-fuzzy-string-matching-for-seo-with-google-sheets-template/)、[影片](https://www.youtube.com/watch?v=XuWPdFteIkQ)、還有[模板](https://docs.google.com/spreadsheets/d/1YcUtXIK7rRKZPlj13IYgjtZIyg2pqH5uC6WW19Ysn9Q/copy)，來展示Fuzzy Matching在SEO中的應用 (作者一開始先帶了這個技術的由來，如果沒特別興趣可以跳過)，內容算是非常全面，也延伸到不少前人的文章，但我個人讀起來覺得有點吃力，尤其覺得在模板中的舉例不是很清楚。
+
+大部分的人都只停留在vlookup或match這類型能做到exact matching的招式，但SEO行業中會需要fuzzy matching的情境不少，如果將這項技能學起來肯定有天會派上用場，因此還是推薦大家看看這篇文章，至少先了解其應用和其限制。
+
+連結: [Fuzzy Matching推薦影片](https://www.youtube.com/watch?v=Ft5lxsXIGfE)
+
+
+---
+
+
+## [影片] CMS(內容管理系統)是否影響SEO?
+
+
+「*網站是不是不要架在痞客幫比較好?*」、「*電商要選Shopify還是WooCommerce*?」、「*WordPress對SEO友善嗎?*」…等等，這集的問題我想大家應該多少都遇過，簡單直接的說(也是John影片中給的答覆)，**不會**，搜尋引擎不在乎網頁是怎麼生成的或背後用什麼CMS，他們只會看最後的結果。
+
+當然，這並不代表CMS完全沒有影響，體質不好的CMS所做出來的網頁可能會有非常多多餘的代碼，或是使用者無法修改的蓋板廣告，這些都會影響SEO。另外除了CMS本身之外，很多額外安裝的外掛或插件，都可能會增加網站的”負擔”。
+
+但歸根究柢，就Google的角度來說，這些問題與CMS本身是哪個平台無關，他們只注重最後伺服器給回來的原始碼與網頁體驗。
+
+
+---
+
+
+## [摘要] Barry Schwartz 專訪
+
+
+這集的來賓是Barry Schwartz，相信大家多少都有聽過這個名號，他是Search Engine Rountable的創辦人，已經持續報導SEO新聞將近20年! 這集沒有太多與SEO有關的有用資訊，但很適合輕鬆聽，他們的互動相當有趣。
+
+Barry在SEO圈是有名的記者，Google幾位搜尋發言人的一言一行，還有社群上的討論都被他盯得緊緊的，我在Twitter上其實沒有follow他，因為容易資訊量過載，SEO圈有什麼新東西都躲不過他的監控。Gary說他們其實很感激Barry如此緊密的盯著他們說的話，因為這讓Google更注意任何對外的發言都要小心不被斷章取義。，
+
+SEO其實只是Barry的一個副業，他14歲就與雙胞胎哥哥創了個軟體公司，rustybrick.com。他每天工作前會花兩個小時左右做SEO相關的事，30分鐘瀏覽完當天的feed，然後一個小時寫作，平均一篇文章大概4\~8分鐘就能完成，但重點是持之以恆了超過15年。
+
+如果想了解這號人物或是看他和Gary兩個的搞笑對話，這集很不錯!
+
+連結: [逐字稿](https://goo.gle/sotr042-Transcript)
+
+
+---
+
+搬回台灣兩個月了，但感覺生活和工作都還沒有很上軌道，需要再加把勁!
+
+

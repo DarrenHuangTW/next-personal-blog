@@ -1,0 +1,201 @@
+---
+title: SEO電子報第六十三期 – 2022.08.16~2022.08.31
+date: 2022-08-31
+tags: ['SEO電子報']
+draft: false
+summary: 想必大家都已多少耳聞Google新的helpful content update，希望數位引擎的讀者對於這個演算法的推出不會感到意外! 除此之外，這期的內容包括了幾個近期的GSC更新、Screaming Frog的新功能以及簡配版的免費雲端抓取工具、以及筆者最喜歡的第八點GPT-3教學文。
+images: []
+---
+
+想必大家都已多少耳聞Google新的helpful content update，希望數位引擎的讀者對於這個演算法的推出不會感到意外! 除此之外，這期的內容包括了幾個近期的GSC更新、Screaming Frog的新功能以及簡配版的免費雲端抓取工具、以及筆者最喜歡的第八點GPT\-3教學文。
+
+* [[新聞] 新的演算法更動「Helpful Content Update」](http://43.201.249.211/seo-newsletter-issue-63.html#toc-1)
+* [[官方] GSC 報表更新分類方式](http://43.201.249.211/seo-newsletter-issue-63.html#toc-2)
+* [[官方] 站長工具中「CWV報表」更新](http://43.201.249.211/seo-newsletter-issue-63.html#toc-3)
+* [[工具] Screaming Frog v17更新](http://43.201.249.211/seo-newsletter-issue-63.html#toc-4)
+* [[工具] 免費的雲端網站爬取工具](http://43.201.249.211/seo-newsletter-issue-63.html#toc-5)
+* [[課程] 官方GA4課程\&證書](http://43.201.249.211/seo-newsletter-issue-63.html#toc-6)
+* [[新聞] GSC的「指定國際目標」功能將被棄用](http://43.201.249.211/seo-newsletter-issue-63.html#toc-7)
+* [[教學] 在Google Sheets上用GPT\-3產生AI內容](http://43.201.249.211/seo-newsletter-issue-63.html#toc-8)
+* [[影片] Google「搜尋新手教學」影片中文版](http://43.201.249.211/seo-newsletter-issue-63.html#toc-9)
+* [[摘要] 探討網站的無障礙性(web accessibility)](http://43.201.249.211/seo-newsletter-issue-63.html#toc-10)
+
+
+---
+
+## [新聞] 新的演算法更動「Helpful Content Update」
+
+在2022年八月，Google公告並推出了一項新的演算法更動，稱為 Helpful Content Update。公告中給出內容創作者應該遵循的兩個方針\- (1\.) 創作出給「人」看的內容、(2\.) 避免為了搜尋引擎而寫的內容。
+
+![image 30](http://43.201.249.211/wp-content/uploads/2022/08/image-30.png)
+[Helpful Content Update自 8/25開始推出](https://twitter.com/googlesearchc/status/1560296241212301312)
+
+這項更新已於8/25開始推出，並預計在兩周內完成。另外，也只會影響英文以及一般搜尋(暫不包含Discover)。Google會推出這樣子特別針對內容是否「有幫助」的演算法更新，想必是要針對AI生產內容的趨勢，以及SEO圈內因為「內容為王」而出現的大量平庸文章，若對此來由不了解歡迎參考[第59期介紹的information gain](http://43.201.249.211/seo-newsletter-issue-59.html#toc-8)。
+
+SEO專家Aleyda Solis分享了一個Google Sheet，裡面有25個可以用來檢視內容是否有幫助的問題，推薦給大家參考。
+
+![image 29](http://43.201.249.211/wp-content/uploads/2022/08/image-29-1024x616.png)
+[Aleyda Solis 所分享的自我檢測問題](https://docs.google.com/spreadsheets/d/12-F9Z4NzDADOFRQtOiN-CtjY2aaqj-R5CcrJNCuTha4/edit#gid=0)
+
+連結: [SEL報導](https://searchengineland.com/googles-new-helpful-content-update-targets-sites-creating-content-for-search-engines-first-387237) / 專家整理\&分析([Glen](https://www.gsqi.com/marketing-blog/google-helpful-content-update-new-ranking-signal/) / [Wil](https://www.seerinteractive.com/blog/helpful-content-google-algorithm-update/) / [Joe](https://www.joeyoungblood.com/seo/everything-we-know-about-googles-helpful-content-update/)) 
+
+
+---
+
+
+## [官方] GSC 報表更新分類方式
+
+前陣子 Google Search Console 的介面有一項更動，旨在讓使用者能更一目瞭然、更快速地找到問題，此更新不會影響 Google 的索引方式或搜尋結果。
+
+Google做出這項更動的主要原因是，舊版的介面中會將網址標上除了「有效」與「無效」以外，還有個「警告」狀態，而很多使用者對於網頁「警告狀態」的影響感到困惑。(ex: 一個被標記「警告」的網址到底是有沒有被收錄?)
+
+![image 31](http://43.201.249.211/wp-content/uploads/2022/08/image-31.png)
+改版介面前後比較
+
+新版的報表僅將網址或檢測項目二分法，在結構化資料報告就是「有效 vs 無效」；在索引報告中就是「已收錄 vs 未收錄」；而原本屬於警告的項目，則是會被歸類在最適合的二元分類下。
+
+舉例來說， *被robots.txt擋掉但仍被收錄的網址*，在過去屬於「警告」，在新介面中則屬於「收錄」，畢竟網頁的確是收錄了，只是有些問題。
+
+連結：[官方公告](https://developers.google.com/search/blog/2022/06/search-console-item-classification) / [新分類說明](https://support.google.com/webmasters/answer/11510493) / [Gene Hong的分析 (中文)](https://genehong.medium.com/google-search-console-%E5%B0%8D%E6%B6%B5%E8%93%8B%E7%AF%84%E5%9C%8D%E7%AD%89%E6%94%B9%E7%89%88%E7%9A%84%E9%87%8D%E9%BB%9E%E6%8F%90%E7%A4%BA-930928786ac9)
+
+
+---
+
+
+## [官方] 站長工具中「CWV報表」更新
+
+另外一項GSC的介面改動發生在網頁體驗報表(CWVs Report)，現在在這報表中可以看到URL等級的資料，Google會將有相似問題的網址 (通常代表這些網址使用同一個模板)分類在一起，並且可以看到個別網址的在CWVs三項指標的CrUX分數。
+
+![image 32](http://43.201.249.211/wp-content/uploads/2022/08/image-32.png)
+[官方公告](https://twitter.com/googlesearchc/status/1561727623734169600)
+
+若對CrUX是什麼以及資料來源不熟悉，歡迎參考[第61期的內容](http://43.201.249.211/seo-newsletter-issue-61.html#toc-6)。
+
+連結: [CWV報表文檔](https://support.google.com/webmasters/answer/9205520)
+
+
+---
+
+
+## [工具] Screaming Frog v17更新
+
+Screaming Frog無疑是我最喜歡的SEO健診工具! 近期他們推出了一次大的改版 (v17\)，有非常多很實用的新功能，其中包括了很多非常實用的功能。
+
+1\. 新的”Issues” 報表會將爬取出來的資料整理成各個可修正的建議，另外也可以將兩個不同時間段抓取下來的結果相互比較，直接看出問題是否改善或惡化。
+
+![image 23](http://43.201.249.211/wp-content/uploads/2022/08/image-23-1024x557.png)
+SF v17中可以比較兩次抓取的結果
+
+2\. 新的”limit by URL path”可以設定每個子資料夾最多抓多少網址。可以節省非常多時間和資源，在面對大型網站時特別實用，因為通常同個子資料夾的網址都會有相似的問題。
+
+![image 24](http://43.201.249.211/wp-content/uploads/2022/08/image-24.png)
+設定每個子目錄下的抓取限制
+
+3\. 可分割視窗，屬於UX上的大升級，原本的介面不是那麼容易分析，但現在可以將兩個不同畫面分割拖曳並比較，非常實用。
+
+![image 25](http://43.201.249.211/wp-content/uploads/2022/08/image-25-1024x576.png)
+可以一個 screaming frog 拉出多個視窗
+
+
+---
+
+
+## [工具] 免費的雲端網站爬取工具
+
+SEOnaut是一個開源的免費雲端爬取工具，可以看作是弱化版的screaming frog。用法相當，輸入一個網域以後，簡單的設定一下抓取規範，平台就會爬整個網站並將結果以圖表呈現，同時也當然會將所發現的問題整理出來。
+
+另外也會自動將每次抓取的資料記錄在雲端，並逐次比較，相當適合預算有限的中小型公司，來監控網站的健康狀況。
+
+![image 27](http://43.201.249.211/wp-content/uploads/2022/08/image-27-1024x669.png)
+![image 28](http://43.201.249.211/wp-content/uploads/2022/08/image-28-1024x588.png)
+連結: [工具](https://app.seonaut.org/) / [工具GitHub](https://github.com/StJudeWasHere/seonaut)
+
+
+---
+
+
+## [課程] 官方GA4課程\&證書
+
+Google在其Skillshop平台上正式推出GA4的訓練課程\+證書，在75分鐘內回答完50題，並達到80%就可以通過。與以往一樣，失敗的話只要隔一天就可以再次挑戰。
+
+[Skillshop](https://skillshop.withgoogle.com/)是Google的培訓平台，可以在上面學習Google的工具和平台，並獲得相關證書。
+
+![image 26](http://43.201.249.211/wp-content/uploads/2022/08/image-26.png)
+Skillshop 上的課程一覽
+
+連結: [關於Skillshop](https://support.google.com/skillshop/answer/7043087) / [GA4試玩demo帳號](http://43.201.249.211/seo-newsletter-issue-25.html#toc-5)
+
+
+---
+
+
+## [新聞] GSC的「指定國際目標」功能將被棄用
+
+舊版的Google Search Console中有一個 *international targeting (指定國際目標)* 功能，可以告訴Google你的網站是針對哪個國家的用戶。但在最近，Google公告**這項功能即將在9/22被棄用。**
+
+![image 20](http://43.201.249.211/wp-content/uploads/2022/08/image-20.png)
+[官方公告](https://twitter.com/googlesearchc/status/1562369672430997504)
+
+對於多國多語言的網站來說，Hreflang一直是最好的做法，原本的 international targeting 的用途相當有限，因此被棄用並不感到意外。
+
+但是，這也意味著 international targeting 介面中原本會回報的hreflang問題將一併消失，站長們不再有官方提供的數據來了解hreflang的設定是否正確。
+
+![image 21](http://43.201.249.211/wp-content/uploads/2022/08/image-21.png)
+international targeting 介面上的 hreflang 問題 ([圖片來源](https://twitter.com/aleyda/status/1562373592351969280))
+
+連結: [Google關於多國多語言網站的文件](https://developers.google.com/search/docs/advanced/crawling/international-overview)
+
+
+---
+
+
+## [教學] 在Google Sheets上用GPT\-3產生AI內容
+
+數位引擎過去寫過不少GPT\-3的工具，例如「[模擬John回答問題方式的MullerBot](http://43.201.249.211/seo-newsletter-issue-55.html#toc-8)」、「[自動生產標題與敘述](http://43.201.249.211/seo-newsletter-issue-45.html#toc-9)」、「[使用AI來幫助撰寫Regex語法](http://43.201.249.211/seo-newsletter-issue-60.html#toc-5)」…等等。這篇教學文直接用影片的方式，帶大家了解怎麼用GPT\-3和Google Sheets做出自己的工具。
+
+![image 33](http://43.201.249.211/wp-content/uploads/2022/08/image-33-1024x478.png)
+在Google Sheets上寫出自己的自製公式，靠A欄的文字敘述產生B欄的相對應公式。
+
+很多人可能看到AI或coding會抗拒，認為自己學不來。但這篇文章中的四個影片會手把手帶著操作，而且免費，非常推薦大家實作一次看看，才能更了解AI內容這項技術的發展程度，對Google近期的helpful content update也會更有感。
+
+連結: [GPT\-3教學文](https://www.seotraininglondon.org/gpt3-google-sheets-free-tutorial/) / [OpenAI官方網站](https://beta.openai.com/overview)
+
+
+---
+
+
+## [影片] Google「搜尋新手教學」影片中文版
+
+Google將「搜尋新手教學」這一系列的YouTube影片翻譯成繁體中文，原始英文版有14支影片，但中文直到截稿前只看到五支，但相信會陸續增加。
+
+![image 18](http://43.201.249.211/wp-content/uploads/2022/08/image-18-1024x505.png)
+不是很確定為何中文需要自己的一個playlist，而非在原始影片中提供中文字幕，但多點官方的中文資源總是好的!
+
+連結: [中文playlist](https://www.youtube.com/playlist?list=PLKoqnv2vTMUO1gJLDZbLl7x7xMnpnDJ_a) / [英文playlist](https://www.youtube.com/playlist?list=PLKoqnv2vTMUOHPb5IJIn-7egNRmsvbPIE)
+
+
+---
+
+
+## [摘要] 探討網站的無障礙性(web accessibility)
+
+
+這集採訪了Danny來談Web Accessibility，他是Google的UX Interaction Designer，最近才加入了Google內部的Central Accessibility Team。Podcast的前一大部分都在聊Danny在Google的生涯以及如何接觸到accessibility領域。
+
+「無障礙性」不只限於網站領域，也不一定只是給眼睛有障礙的人，它與UX的範疇有很多重複的地方，包括字體顏色的對比、如何讓文字更容易吸收或略讀…等等。
+
+Tab鍵是很常用來判斷一個網站accessibility的方法，理想上一個無障礙網頁應該要在使用者按tab鍵時，很直覺地跳到下一個段落。另外為了避免menu過複雜、要tab好幾次才能看到主要內容的情況，一個常見的做法是在第一次tab時放上一個”skip links menu”的選項，幫助使用者瀏覽。
+
+![image 19](http://43.201.249.211/wp-content/uploads/2022/08/image-19.png)
+在網頁上第一次按下tab時，會跳出 skip to main content ([範例網頁](https://webaim.org/techniques/skipnav/))
+
+另外如果想要評估網站的無障礙性，最好的方法是用screen readers來瀏覽該網站，推薦的工具有Chrome上的[chromevox外掛](https://chrome.google.com/webstore/detail/screen-reader/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en)、Android手機內建的[talkback](https://support.google.com/accessibility/android/answer/6283677)、或iOS手機的[VoiceOver](https://support.apple.com/guide/iphone/turn-on-and-practice-voiceover-iph3e2e415f/ios)
+
+連結: [逐字稿](https://goo.gle/sotr044-Transcript)
+
+
+---
+
+最近很常跑健身房來發洩上班的一肚子鳥氣跟壓力，希望離職的時候可以順便成為筋肉人一枚
+
+

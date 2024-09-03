@@ -1,0 +1,194 @@
+---
+title: SEO電子報第四十三期 – 2021.10.16~2021.10.31
+date: 2021-11-01
+tags: ['SEO電子報']
+draft: false
+summary: 這集電子報有不少的新聞資訊，但除此之外，第五點和第六點所提到的兩個網站推薦大家點過去看看，不管是上面的內容或是內容的呈現方式和架構，都很值得學習；另外還有第八點所介紹的工具，是一般在做關鍵字研究時比較少利用到的；最後是CWV，雖然一直重複講，不過這次和該專案PM及Tech Lead的訪談還是很值得一聽!
+images: []
+---
+
+這集電子報有不少的新聞資訊，但除此之外，第五點和第六點所提到的兩個網站推薦大家點過去看看，不管是上面的內容或是內容的呈現方式和架構，都很值得學習；另外還有第八點所介紹的工具，是一般在做關鍵字研究時比較少利用到的；最後是CWV，雖然一直重複講，不過這次和該專案PM及Tech Lead的訪談還是很值得一聽! 
+
+* [[SERP更新] 手機版向下滾動載入下一頁](http://43.201.249.211/seo-newsletter-issue-43.html#toc-1)
+* [[新聞] Bing與Yandex推出「IndexNow」開源協定](http://43.201.249.211/seo-newsletter-issue-43.html#toc-2)
+* [[新聞] GSC API 加入Discover和Google新聞資料](http://43.201.249.211/seo-newsletter-issue-43.html#toc-3)
+* [[新聞] Google 搜尋品質評估指南更動](http://43.201.249.211/seo-newsletter-issue-43.html#toc-4)
+* [[資源] 新平台: Google for Creators](http://43.201.249.211/seo-newsletter-issue-43.html#toc-5)
+* [[報告] The State of Technical SEO](http://43.201.249.211/seo-newsletter-issue-43.html#toc-6)
+* [[好文] 關於主題群集 (Topic Clustering)](http://43.201.249.211/seo-newsletter-issue-43.html#toc-7)
+* [[工具] People Also Search For 關鍵字抓取](http://43.201.249.211/seo-newsletter-issue-43.html#toc-8)
+* [[影片] 絕對網址 vs 相對網址](http://43.201.249.211/seo-newsletter-issue-43.html#toc-9)
+* [[摘要] Google Search Podcast – 網站使用體驗核心指標](http://43.201.249.211/seo-newsletter-issue-43.html#toc-10)
+
+
+---
+
+
+## [SERP更新] 手機版向下滾動載入下一頁
+
+手機版的SERP最近有一個看似雖小，但對SEO影響值得關注的一項變動，在手機版的搜尋結果上，當使用者滑到最下面，再繼續滑一下就會載入再下一頁的結果，這個行為會持續到第四頁。在下方的Tweet上可以看到畫面，目前僅在美國的英文結果推出。
+
+
+> Beginning today, continuous scrolling is starting to roll out to Google Search for most English searches on mobile devices in the US. Learn more: https://t.co/ulPL0EaKV0 [pic.twitter.com/W0iwL3fdy6](https://t.co/W0iwL3fdy6)
+> 
+> — Google SearchLiaison (@searchliaison) [October 14, 2021](https://twitter.com/searchliaison/status/1448707950281854982?ref_src=twsrc%5Etfw)
+
+在官方公告說，做出這個改動的原因是使用者有時候是想在SERP上找到具有啟發性的結果，而這些人通常會滑到第四頁左右。我自己使用起來覺得的確比較不會只停在第一頁，原本不在第一頁的結果更容易被看到，因為往下滑的動作比較自然，不會有多一個點擊動作並且要停頓一下個卡頓感。
+
+在對SEO的影響方面，有人認為這可能會**讓排名稍微後面的網頁有更多曝光，而排名前面的網站反而CTR下降**，對此還沒有很多研究和數據，但Aleyda Solis有推出個[Google Data Studio的模板](https://datastudio.google.com/u/0/reporting/8fbf65e6-9c0a-4627-95ac-f858bfac89e2/page/6zXD)可以觀察，值得關注。另外John在[推特](https://twitter.com/JohnMu/status/1450018408796459025?s=20)上說道，這個僅是UI上的改動，對GSC的排名和曝光應該不影響。
+
+連結: [官方公告](https://blog.google/products/search/continuous-scrolling-mobile/) / [SER報導](https://www.seroundtable.com/google-continuous-scroll-on-mobile-32251.html)
+
+
+---
+
+
+## [新聞] Bing與Yandex推出「IndexNow」開源協定
+
+「IndexNow」是由Bing與Yandex合作開發的一項開源協定，目的是要建立一個由網站主動提交內容變動給搜尋引擎知道的溝通方式，取代現有搜尋引擎(ex: Google)來主動抓取的不效率方式。
+
+提交的方式非常簡單，只要將(1\.)一個或一列網址，以及(2\.)一個驗證身分的key，提交到搜尋引擎專門的endpoint就可以了。而接收到請求的搜尋引擎，會再將這個資訊分享給其他也支援這項協定的搜尋引擎(目前僅有Bing和Yandex)。
+
+![IndexNow 即時索引 1](http://43.201.249.211/wp-content/uploads/2021/10/IndexNow-即時索引-1.png)
+提交範例 – 僅需網址和 key
+
+數位引擎過去曾[多次提到](http://43.201.249.211/seo-newsletter-issue-40.html#toc-2)Bing在索引這塊一直提倡這樣的方法，現在與Yandex合作並將這個方法開源，Cloudflare也[宣布](https://blog.cloudflare.com/cloudflare-now-supports-indexnow/)就算是免費用戶也支援其開啟IndexNow功能。
+
+另外有趣的一點是在[WordPress的討論區](https://core.trac.wordpress.org/ticket/52900)中，可以看到來自Google, Yoast, WordPress這幾個強大團體的人的討論，看是否該將此功能納為WordPress Core的一部分。
+
+連結: [Bing公告](https://blogs.bing.com/webmaster/october-2021/IndexNow-Instantly-Index-your-web-content-in-Search-Engines) / [IndexNow官網](https://www.indexnow.org/)
+
+
+---
+
+
+## [新聞] GSC API 加入Discover和Google新聞資料
+
+Google Search Console在去年加入了Discover，在[今年初](http://43.201.249.211/seo-newsletter-issue-24.html#toc-11)加入Google News的資料，但一直到2021年十月中，才將這兩項資料整合進Search Analytics API中。發文前看了一下在Data Studio中的GSC還沒有更新，但API已經可以撈到這兩塊的資料的。
+
+原本API中的`searchType`將改為`type`，其中可接受的值從原本的四個`news`、`image`、 `video`、`web`，再額外加入`discover`、`googleNews`。
+
+![search analytics api discover gnews](http://43.201.249.211/wp-content/uploads/2021/10/search-analytics-api-discover-gnews-1024x588.png)
+範例 : 在 2021\-11\-10\~2021\-11\-15這段期間，網址包含 “buy或purchase或order”的網頁，出現在Google新聞裡的成效
+
+其中比較容易混淆的是`googleNews`和`news`，前者是指網站在 「Google 新聞 (news.google.com) 」，以及安卓及蘋果的 「Google 新聞應用程式」上的表現；而後者是在 Google搜尋中的「新聞」分頁(news tab)的表現，
+
+![googleNews vs news](http://43.201.249.211/wp-content/uploads/2021/10/googleNews-vs-news.png)
+Search Analytics API中的 “type”
+
+連結: [官方公告](https://developers.google.com/search/blog/2021/10/search-analytics-discover-gnews) / [API使用文檔](https://developers.google.com/webmaster-tools/search-console-api-original/v3/searchanalytics/query) / [SER報導](https://www.seroundtable.com/google-search-analytics-api-discover-news-data-regex-support-32306.html)
+
+
+---
+
+
+## [新聞] Google 搜尋品質評估指南更動
+
+在過去的電子報中曾經介紹過『搜尋品質評估指南 (Search Quality Rating Guidelines)』這份文件，包括[這則影片](https://www.darrenhuang.com/seo-newsletter-issue-20.html#toc-8)、[Danny寫的文章](https://www.darrenhuang.com/seo-newsletter-issue-14.html#toc-3)、以及Google搜尋大老[Ben Gomes的採訪](https://www.facebook.com/searchenginecommunity/posts/340362586701690)。這份文件主要是用來讓Search Quality Raters在幫搜尋結果評分時的依據。它雖然不會告訴你Google的排名要素是什麼，但卻說明了Google理想中的演算法該返回的結果。
+
+因為該文件的重要，每當它有所修改，SEO就想試著從中看出Google在搜尋上是否有態度或方針上的改變。我自己看了[Lily Ray](https://www.searchenginejournal.com/quality-rater-guidelines-updates/424034/)和[Jennifer Slegg](http://www.thesempost.com/google-quality-rater-guidelines-low-quality-2021/)兩位的整理，並沒有覺得太多大方向的改動，但還是推薦可以閱讀一下改動的地方。
+
+![Google 搜尋評估指南更新](http://43.201.249.211/wp-content/uploads/2021/10/Google-搜尋評估指南更新.png)
+在該文件的最下方有列出 Changelog
+
+如果你從來沒讀過這份172頁的評分指南，推薦去找網路上的一些摘要、參考這份[志工們所翻譯的中文版](https://translate.yukilaiblog.com/)、但最推薦的還是自己閱讀原版來消化吸收 (或至少有困惑時交叉比對原版)。其中我自己覺得最有趣的是2\.6章節，在講評分者應該如何評估一個網站/創作者的名聲
+
+連結: [Search Quality Rating Guidelines完整版](https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf)
+
+
+---
+
+
+## [資源] 新平台: Google for Creators
+
+Google推出了一個專門給內容創作者(content creators)的平台，叫做[Google for Creators](https://creators.google/en-us/)，這個平台提供資源教導和幫助內容創作者擴展自己的事業。我逛了一圈，裡面的文章雖然對SEO人可能偏簡單，但對沒有網路行銷基礎概念的內容創作來說應該是個很不錯的學習資源，裡面的[指南](https://creators.google/en-us/content-creation-guides/)分為四大類 – 基礎概念、建立內容策略、吸引和尋找粉絲、成長與營利。
+
+![Google給內容創作者的平台](http://43.201.249.211/wp-content/uploads/2021/10/Google給內容創作者的平台-1024x256.png)
+網站上的四大指南
+
+現在自媒體文化興起，我認為Google推出這個平台的另一個想法是不想看到”內容”都只在社群媒體上被創作，要讓內容創作者們[知道](https://creators.google/en-us/about-web-creators/)擁有所創作內容的所有權有多重要，以及Google所提供的[各種工具](https://creators.google/en-us/content-creation-products/)(GSC, Adsense, Google Trends, etc)。
+
+連結: [官方公告](https://blog.google/google-for-creators/introducing-google-for-creators/)
+
+
+---
+
+
+## [報告] The State of Technical SEO
+
+「[Women in Tech SEO](https://www.womenintechseo.com/)」這個SEO社群推出了第一份技術面SEO領域的報告，透過問卷累積超過870位SEO的回答，並結合該社群內的專家點評，不管是在inhouse、agency、或自己當freelancer，都可以將自身的現況與領域比較，有個參考值。
+
+![inhouse seo 團隊的預算](http://43.201.249.211/wp-content/uploads/2021/10/inhouse-seo-團隊的預算-1024x389.png)
+報告截圖 – Inhouse SEO 團隊在僱請外部 SEO協助的平均每月預算
+
+我認為這份報告很值得一讀，裡面有些統計結果像是「*身為inhouse SEO，你花最多時間在什麼事情上面?*」、「*Agency SEO的收費方式?*」、「*你認為技術面SEO在執行上的最大阻礙是什麼?*」…等等，讀完有種欣慰的感覺，大家遇到的痛點其實都差不多阿\~
+
+連結: [The State of Technical SEO Report](https://aira.net/state-of-technical-seo/)
+
+
+---
+
+
+## [好文] 關於主題群集 (Topic Clustering)
+
+不論過去有沒有接觸Topic Cluster這個內容SEO的概念，這篇由[Samuel Schmitt所寫的文章](https://samuelschmitt.com/what-is-a-topic-cluster/)我都覺得很值得花時間閱讀。文章中講了Topic Cluster是什麼、一篇超長文vs一個主題群集、如何分類子主題、何時適合或不適合使用這個方法、以及實際的例子…等等。
+
+![什麼是主題集群](http://43.201.249.211/wp-content/uploads/2021/11/什麼是主題集群.png)
+主題群集 (topic cluster)的五大成份 – 主題、一個核心頁面、子主題/子頁面、連結、結構化網址
+
+延伸閱讀: [什麼是Topic Authority](https://samuelschmitt.com/what-is-a-topic-cluster/)
+
+
+---
+
+
+## [工具] People Also Search For 關鍵字抓取
+
+這是由Search Response所推出的新工具，輸入一個關鍵字，可以幫你抓出並整理「People also search for (PASF)」這個區塊裡的推薦字。在[第38期電子報](http://43.201.249.211/seo-newsletter-issue-38.html#toc-5)中有推薦他們家的另一個「Pepople Also Ask」工具，兩個對於關鍵字研究都相當實用。
+
+![people also search for關鍵字研究](http://43.201.249.211/wp-content/uploads/2021/11/people-also-search-for關鍵字研究-1024x538.png)
+People Also Search For 介面
+
+People Also Search For是當使用者點了某個結果，然後點上一頁回到搜尋結果時，會出現的推薦搜尋字，目的是幫助使用者使用更精準的搜尋字，但同時也是在做關鍵字研究時相當不錯的一個資料來源。
+
+![people also search for](http://43.201.249.211/wp-content/uploads/2021/11/people-also-search-for.png)
+People also search for 關鍵字
+
+連結: [People Also Search For工具](https://searchresponse.io/people-also-search-for) / [SEL關於PASF的介紹](https://searchengineland.com/google-launches-new-look-people-also-search-search-refinements-291918)
+
+
+---
+
+
+## [影片] 絕對網址 vs 相對網址
+
+這集影片中John回答了一個基本的問題，內部連結使用相對網址或絕對網址是否有差別? 絕對網址就是在\<a\> tag中使用完整的網址 (例如: `<a href="http://43.201.249.211/seo-newsletter-issue-43.html">`)，而相對網址就是使用部分網址 (例如: `<a href="/seo-newsletter-issue-43.html">`)。
+
+大家在學SEO的時候可能聽過要使用絕對網址，但像John在影片中說的，對搜尋引擎來說，兩者在設置正確的情況下是沒有區別的，相對網址有其方便性(例如更換網域的時候)。
+
+
+
+---
+
+
+## [摘要] Google Search Podcast – 網站使用體驗核心指標
+
+這集節目找來了[Annie](https://twitter.com/anniesullie)和Vivek要來聊[Core Web Vitals (CWVs)](https://www.darrenhuang.com/core-web-vitals-lcp-fid-cls.html)，Annie是開發CWV的tech lead，而Vivek則是這個項目的PM。如果一直有在關注數位引擎想必對這個議題不陌生，但這二位是CWV的重要腳色，有些東西由我轉述可能沒這麼有感覺，所以還是相當推薦大家聽聽這集的podcast。
+
+
+**CWVs在一間公司的優先級程度到底如何?** Martin說道很多公司都沒有把performance融入開發網站的文化中，如果網站有bug那很明顯就是要去修復，但如果網站只是跑得慢，很難去說服其他人把這件事看作優先代辦事項，這也是為什麼要有CWVs這個標準的背後原因之一，希望大家更在乎網頁的用戶瀏覽體驗，優先級取決於公司對此的重視程度，沒有什麼對或錯，SEO與排名也僅是其中的一小個決定因素。
+
+在22;40秒左右，Annie有簡單講一下**SSR、CSR、Hydration之間的關係**，這部分推薦大家自己聽或者看[這篇文章](https://developers.google.com/web/updates/2019/02/rendering-on-the-web#wrapup)。JS Rendering有它的好處和方便性，我認為有SEO不該一聽到網站是用JavaScript做的就先亮紅燈，應該多了解其背後的優劣 (不管是對於使用者、performance、或是開發者)，才更方便溝通。
+
+**CWVs未來展望** – CWVs不是一次性的項目，也不會永遠都是一樣的三個指標。Annie說現在的三個指標都比較重視一開始的頁面載入體驗，但用戶體驗應該也要包含網頁載入之後的體驗，例如滾動起來有沒有卡卡的(smoothness)、accessibility、privacy、security，都是他們的目標，這點在[2020年的Chrome Dev Summit](https://www.facebook.com/searchenginecommunity/videos/223574972736913/)上有提到過。
+
+**更好的網路生態** – 讓每個網站主意識到performance的重要性固然重要，但要提升整體網路環境需要更能規模化的方法，因此Vivek提到他們也積極與CMS平台合作，這樣一來一點架構的進步就會影響大量的網站。舉例來說WordPress前幾年推出native lazy loading，但卻將hero image的大圖也放上了lazy\-loading，而此舉其實對LCP不好，因此前一陣子他們和WP的開發團隊合作解決這個問題 (web.dev上有篇[案例分析](https://web.dev/lcp-lazy-loading/)就在講這個)。
+
+連結: [逐字稿](https://hwcdn.libsyn.com/p/f/b/3/fb34038b2f81116e/Search_Off_the_Record_-_25th_episode_1.pdf?c_id=113869562&cs_id=113869562&expiration=1635524301&hwt=73a89bd2280ffd3446976e48b56e2632)
+
+
+---
+
+今年年底我會回台灣一趟，座標高雄。如果有特別想約出來見個面的朋友歡迎Slack上私訊聊聊\~ 
+
+
